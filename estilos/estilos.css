@@ -16,7 +16,7 @@ html {
 body {
     background-color: rgba(173, 216, 230, 0.573);
 }
-
+  
 .contenedor {
     max-width: 1200px;
     width: 90%;
@@ -39,14 +39,28 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
 .boton {
     color: white;
     background: #e25d31;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: 'Montserrat', Verdana, Arial, sans-serif;
     font-weight: 500;
     border-radius: 8px;
-    padding: 1.2rem 2rem;
+    padding: 1rem 1.8rem;
+}
+
+.boton_Info {
+    font-size: 1.1rem;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: .5rem;
+    margin-top: 10px;
 }
 
 .subtituloDePagina {
@@ -54,27 +68,32 @@ a {
     font-family: 'Montserrat', Verdana, Arial, sans-serif;
     font-weight: 700;
     line-height: 1.6;
-    margin: 10px 0;
+    margin-bottom : 10px;
 }
 
 
 
 /* ESTILOS DEL HEADER */
+
+header {
+    grid-area: header;
+}
+
 .contenedorDelEncabezado {
-    padding: 1rem;
+    padding: 2rem;
     background-color: black;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 20px;
 }
-
 .logo a {
     font-family: Georgia;
-    font-size: 3.9rem;
+    font-size: 3.8rem;
     font-weight: 400;
     color: white;
 }
@@ -84,97 +103,111 @@ a {
 }
 
 .nav__menu {
-    display: inline-block;
-    margin-left: 300px;
-    margin-top: 90px;
+    display: flex;
+    align-items: flex-end;
 }
-
+    
 .nav__lista li {
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 1rem; 
 }
 
 .nav__lista .nav__lista--link {
-    font-size: 1.5rem;
     font-family: 'Montserrat', Verdana, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
     color:white;
+    margin: 0.5rem;
 } 
 
 .nav__lista li:hover .nav__lista--link {
-    text-decoration: underline;
+    border-bottom: 1px solid #e25d31;
 }
 
 /* ESTILOS DEL FOOTER */
 
 footer {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+    grid-area: footer;
+    background-color: lightcyan;
 }
 
 .contenedorDelFooter {
-    margin-top: 2rem;
-    padding: 0 1rem;
-}
-
-.footer__columna1 {
-    display: inline-block;
-    margin-right: 8rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+    margin: 2rem 2rem;
 }
 
 .footer__columna1 .logo {
     margin-bottom: 2rem;
 }
 
-.footer__columna1 .footer__newsletter input{
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.footer__columna1 .logo a {
+    font-size: 3rem;
+    color: black;
 }
 
-.footer__columna2 {
-    display: inline-block;
-    margin-right: 8rem;
+.footer__columna1 input {
+    font-size: 1.3rem;
+    padding: 3px;
+    margin-bottom: 1.5rem;
+    display: block;   
 }
 
 .footer__columna2 img {
     width: 45px;
-    margin: 0 20px;
 }
 
-.footer__columna3 {
-    display: inline-block;
-    margin-right: 10rem;
+.footer__redes {
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer__titulo {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .copyright {
-    padding: 2rem 0;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
 }
 .copyright__texto {
     font-size: 1.1rem;
 }
 
+
 /* ESTILOS DE PAGINA INDEX */
 
+.index__contenedorDelBody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "header header header"
+        "portada portada portada"
+        "conciertos noticias noticias"
+        "footer footer footer" ;
+}
+
 /* Portada */
+
+main {
+    grid-area: portada;
+}
 .index__portada {
     position: relative;
 }
-.index__portada img {
-    width: 100%;
-}
 
 .portada__presentacion {
-    background: rgba(0, 0, 0, 0.469);
     position: absolute;
+    bottom: 0;
     width: 100%;
-    top: 85%;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    min-height: 70px;
+    padding: 10px 45px 25px 45px;
 }
 
 .portada__presentacion h1 {
@@ -186,70 +219,116 @@ footer {
 }
 
 .portada__presentacion h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 1.4;
+    letter-spacing: 0.6px;
     color: white;   
 }
 
 /* Sections del Index: Proximos conciertos y Noticias */
+.conciertos {
+    grid-area: conciertos;
+}
+
+.noticias {
+    grid-area: noticias;
+}
 
 .index__sections {
     background-color: white;
-    padding: 1rem;
-    padding-bottom: 50px;
+    padding: 3rem;
+    height: 100%;
 }
 
 .index__sections article {
-    margin: 20px 0;
+    margin: 45px 0;
 }
 
 .index__sections h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.4;
+    color: #e25d31;
+    margin-bottom: 2px;
 }
 
 .index__sections p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
 }
+
+.fondogris {
+    background-color: rgba(211, 211, 211, 0.775);
+}
+
 
 /* ESTILOS DE LA PAGINA BIOGRAFIA */
 
+.biografia__contenedorDelBody {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "header header"
+        "enlacesBio enlacesBio"
+        "ensambleSlider ensambleTexto"
+        "directorTexto directorSlider"
+        "footer footer";
+        background-color: white;
+}
+
 .enlacesBiografia {
-    background-color: white;
-    padding: 2.5rem 3rem;
-    padding-left: 290px;
+    grid-area: enlacesBio;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
 }
 
 .enlacesBiografia a {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-family: Verdana, Tahoma, Arial, sans-serif;
-    color: black;
+    color: #e25d31;
     border: 1px solid;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    text-align: center;     
-}
-.enlacesBiografia a:hover {
-    color:#e25d31;
+    padding: 0.5rem 5rem;
+    text-align: center;
 }
 
-.contenedorDeBio {
-    background-color: white;
+.enlacesBiografia a:hover {
+    background-color: #e25d31; 
+    color: white;
+}
+
+#ensambleBio, #directorBio {
+    margin-bottom: 100px;
+}
+
+.ensambleFotos {
+    grid-area: ensambleSlider;
+    padding: 0 20px;
+}
+
+.ensambleTexto {
+    grid-area: ensambleTexto;
+    padding: 0 20px;
+}
+
+.directorTexto {
+    grid-area: directorTexto;
+    padding: 0 20px;
+}
+
+.directorFotos {
+    grid-area: directorSlider;
     padding: 20px;
 }
 
-.contenedorDeBio img {
-    width: 100%;
-}
-
-.contenedorDeBio p {
-    font-size: 1.5rem;
+.directorTexto p, .ensambleTexto p {
+    font-size: 1.3rem;
     font-family: Verdana, Tahoma, Arial, sans-serif;
-    text-align: justify;
+    line-height: 1.4;
 }
 
+    
 /* ESTILOS DE LA PAGINA CONCIERTOS */
 
 .proximosConciertos {
@@ -291,7 +370,7 @@ footer {
 
 .listadoConciertos .itemConcierto {
     margin-bottom: 2rem;
-}
+} */
 
 /* ESTILOS DE LA PAGINA MEDIA */
 
@@ -375,7 +454,7 @@ footer {
     margin-left: 200px;
 }
 
-/* El formato del formulario es temporal hasta que se pueda usar flex */ 
+/* El formato del formulario es temporal */ 
 .contacto4 label {
     margin-left: 250px;
     padding: 10px;
@@ -383,4 +462,150 @@ footer {
 
 .contacto4 input {
     margin: 10px;
+}
+
+/*Media queries*/
+
+/*TABLET*/
+
+@media screen and (max-width: 768px) {
+
+/*Header*/
+
+.contenedorDelEncabezado {
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+
+.contenedorDelFooter {
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__columna3 {
+    text-align: center;
+    
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}
+.copyright__texto {
+    font-size: 1.3rem;
+}
+
+/*Biografia*/
+
+.biografia__contenedorDelBody {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: 
+    "header"
+    "enlacesBio"
+    "ensambleSlider"
+    "ensambleTexto"
+    "directorSlider"
+    "directorTexto"
+    "footer";
+}
+
+#ensambleBio, #directorBio {
+    margin-bottom: 50px;
+}
+
+}
+
+/*CELULAR*/
+
+@media screen and (max-width: 500px) {
+
+    /*Generales*/
+    
+    .subtituloDePagina {
+        font-size: 1.6rem;
+    }
+
+    /*Header*/
+
+    .nav__lista li {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    /*Footer*/
+
+    .contenedorDelFooter {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 3rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__redes img {
+        width: 35px;
+    }
+    
+    .copyright {
+        margin-top: 5rem;
+        width: 90%;
+    }
+
+    /*Index*/
+
+    .index__contenedorDelBody {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "portada"
+        "conciertos"
+        "noticias"
+        "footer";
+    }
+
+    /*Index portada*/
+
+    .portada__presentacion {
+        padding: 10px 45px 10px 45px;
+    }
+    .portada__presentacion h1 {
+        font-size: 1.8rem;
+    }
+
+    .portada__presentacion h2 {
+        font-size: 1.2rem;
+    }
+
+    /*Index conciertos*/
+
+    .index__sections {
+        text-align: center;
+    }
+
+    /*Biografia*/
+
+    .enlacesBiografia {
+        flex-wrap: wrap;
+        gap: 0.1rem;
+        text-align: center;
+    }
+
+    .enlacesBiografia a {
+        font-size: 0.9rem;
+    }
+
+    .ensambleFotos .directorFotos {
+        padding: 0 10px;
+    }
 }
