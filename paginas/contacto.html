@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="contacto__contenedorDelBody contenedor">
     
-    <!-- Comienzo del Header -->
-    <header>
-        <div class="contenedor">
+        <!-- Comienzo del Header -->
+        <header>
             <div class="contenedorDelEncabezado">
                 <div class="logo">
-                    <a href="../index.html">ENSAMBLE <br> <span>POLIFONISTAS</span></a>
+                    <a href="../index.html">ENSAMBLE <span>POLIFONISTAS</span></a>
                 </div>
                 <div class="nav__menu">
                     <nav>
@@ -32,105 +32,130 @@
                     </nav>
                 </div>
             </div>
-        </div>
-    </header> 
-    <!-- Fin del Header -->
+        </header> 
+        <!-- Fin del Header -->
     
-    <section class="contacto1 contenedor">
-        <h2 class="subtituloDePagina">Contacto</h2>
-        <h3>Ensamble Polifonistas</h3>
-        <p>J. M. Moreno 693 - CABA</p>
-        <p>Tel: (+54) 11 1234 5678</p>
-        <p>Correo electrónico: <a href="mailto: polifonistas@gmail.com">polifonistas@gmail.com</a></p>
-    </section>
-    <section class="contacto2 contenedor">
-        <h2 class="subtituloDePagina">Equipo</h2>
-        <div class="team">
-            <img src="../imagenes/DirectorArtistico.jpg" alt="Marcelo Dutto">
-            <h3>Marcelo Dutto</h3>
-            <p>Director artístico</p>
-            <p>Correo electrónico: <a href="mailto: polifonistas@gmail.com">marcelodutto@polifonistas.com</a> </p>
-            <p>Tel: (+54) 11 1234 5678</p>
-        </div>
-        <div class="team">
-            <img src="../imagenes/ProductoraEjecutiva.jpg" alt="Virginia Majorel">
-            <h3>Virginia Majorel</h3>
-            <p>Productora ejecutiva</p>
-            <p>Correo electrónico: <a href="mailto: polifonistas@gmail.com">virginiamajorel@polifonistas.com</a></p>
-            <p>Tel: (+54) 11 1234 5678</p>
-        </div>
-        <hr>
-    </section>
-    
-    <section class="contacto3 contenedor">
-        <h2 class="subtituloDePagina">Buscanos en las redes sociales</h2>
-        <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
-        <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
-        <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
-        <hr>
-    </section>
-    
-    <section class="contacto4 contenedor">
-        <h2 class="subtituloDePagina">Formulario de contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>             
-            <input type="text" name="nombre" placeholder="Nombre" />            
-            <label for="apellido">Apellido:</label> 
-            <input type="text" name="apellido" placeholder="Apellido" />
-            <br>
-            <label for="newsletter">Dirección de correo electrónico:</label>
-            <input type="email" name="newsletter" placeholder="Ingrese su email...">
-            <br>
-            <label for="mensaje">Escriba su mensaje:</label>
-            <textarea name="mensaje" cols="30" rows="10"></textarea>
-            <br>
-            <label for="newslettercheckbox">¿Le gustaría suscribirse a nuestro newsletter?</label>
-            <input type="checkbox" name="newslettercheckbox">
-            <br>
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
-    
-<!-- Comienzo del Footer -->
-<footer>
-    <hr>
-    <div class="contenedor">
-        <div class="contenedorDelFooter">
-                        
-            <div class="footer__columna1">
-                <!-- <div class="logo">
-                    <a href="../index.html">ENSAMBLE <br> <span>POLIFONISTAS</span></a>
-                </div> -->
-                <div class="footer__newsletter">
-                    <form>
-                        <label for="newsletter"><h4 class="footer__titulo">Suscríbase a nuestro newsletter</h4></label>
-                        <input type="email" name="newsletter" placeholder="Ingrese su email...">
-                        <input type="submit" value="Enviar">
-                    </form>
+        <section class="contacto1">
+            <div class="con1Texto">
+                <h2 class="subtituloDePagina">Contacto</h2>
+                <h3>Ensamble Polifonistas</h3>
+                <p>J. M. Moreno 693 - CABA</p>
+                <p>Tel: (+54) 11 1234 5678</p>
+                <p><a href="mailto: polifonistas@gmail.com">polifonistas@gmail.com</a></p>
+            </div>
+        </section>
+        <section class="contacto2">
+            <h2 class="subtituloDePagina">Equipo</h2>
+            <div class="contenedorTeam">
+                <div class="team">
+                    <img src="../imagenes/director.jpg" alt="Marcelo Dutto">
+                    <div class="teamTexto">
+                        <h3>Marcelo Dutto</h3>
+                        <h4>Director artístico<h4>
+                        <p><a href="mailto: polifonistas@gmail.com">marcelodutto@polifonistas.com</a></p>
+                        <p>Tel: (+54) 11 1234 5678</p>
+                    </div>
+                </div>
+                <div class="team">
+                    <img src="../imagenes/ProductoraEjecutiva.jpg" alt="Virginia Majorel">
+                    <div class="teamTexto">
+                        <h3>Virginia Majorel</h3>
+                        <h4>Productora ejecutiva<h4>
+                        <p><a href="mailto: polifonistas@gmail.com">virginiamajorel@polifonistas.com</a></p>
+                        <p>Tel: (+54) 11 1234 5678</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="footer__columna2">
-                <h4 class="footer__titulo">Síganos en nuestras redes sociales</h4>
+        </section>
+        
+        <section class="contacto3">
+            <h2 class="subtituloDePagina">Buscanos en las redes sociales</h2>
+            <div class="iconosRedes">
                 <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
                 <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
                 <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
             </div>
+        </section>
+        
+        <section class="contacto4 fondogris">
+            <div class="contenidoContacto4">
+                <div class="tituloFormulario">
+                    <h2 class="subtituloDePagina">Formulario de contacto</h2>
+                </div>
+                <div class="formulario">
+                    <form>
+                        <div class="formFila">
+                            <div class="formSeccion">
+                                <div class="formGrupo">
+                                    <label for="nombre">Nombre:</label>             
+                                    <input type="text" name="nombre" placeholder="Nombre" />
+                                </div>            
+                                <div class="formGrupo">
+                                    <label for="apellido">Apellido:</label> 
+                                    <input type="text" name="apellido" placeholder="Apellido" />
+                                </div>
+                            </div>
+                            <div class="formSeccion">
+                                <div class="formGrupo">
+                                    <label for="newsletter">Dirección de correo electrónico:</label>
+                                    <input type="email" name="newsletter" placeholder="Ingrese su email...">
+                                </div>
+                                <div class="formGrupo">
+                                    <label for="asunto">Asunto:</label>             
+                                    <input type="text" name="asunto" placeholder="Asunto" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formFila">
+                            <div class="seccionLarga">
+                                <div class="formGrupo">
+                                    <label for="mensaje">Escriba su mensaje:</label>
+                                    <textarea name="mensaje" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botonEnviar formSeccion">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Comienzo del Footer -->
+        <footer>
+            <div class="contenedorDelFooter">     
+                <div class="footer__columna1">
+                    <form>
+                        <label for="newsletter"><h4 class="footer__titulo">Suscríbase a nuestro newsletter</h4></label>
+                        <input type="email" name="newsletter" placeholder="Ingrese su email...">
+                        <div class="botonEnviar">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
 
-            <div class="footer__columna3">
-                <h4 class="footer__titulo">Para comunicarse con nosotros</h4>
-                <a href="../paginas/contacto.html" class="boton">Ir a contacto</a>
+                <div class="footer__columna2">
+                    <h4 class="footer__titulo">Síganos en nuestras redes sociales</h4>
+                    <div class="footer__redes">
+                        <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
+                        <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
+                        <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
+                    </div>
+                </div>
+
+                <div class="footer__columna3">
+                    <h4 class="footer__titulo">Para comunicarse con nosotros</h4>
+                    <a href="contacto.html" class="boton">Ir a contacto</a>
+                </div>    
             </div>
 
             <div class="copyright">
-                <p class="copyright__texto">
-                    Copyright ©2022 Ensamble Polifonistas | Todos los derechos reservados
-                </p>
+                <p class="copyright__texto">Copyright ©2022 Ensamble Polifonistas | Todos los derechos reservados</p>
             </div>
-        </div>
-    </div>
-</footer>
-<!-- Fin del Footer -->
+        </footer>
+        <!-- Fin del Footer -->
 
+    </div>
 </body>
 </html>

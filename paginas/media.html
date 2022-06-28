@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="media__contenedorDelBody contenedor">
     
-    <!-- Comienzo del Header -->
-    <header>
-        <div class="contenedor">
+        <!-- Comienzo del Header -->
+        <header>
             <div class="contenedorDelEncabezado">
                 <div class="logo">
-                    <a href="../index.html">ENSAMBLE <br> <span>POLIFONISTAS</span></a>
+                    <a href="../index.html">ENSAMBLE <span>POLIFONISTAS</span></a>
                 </div>
                 <div class="nav__menu">
                     <nav>
@@ -32,76 +32,81 @@
                     </nav>
                 </div>
             </div>
-        </div>
-    </header> 
-    <!-- Fin del Header -->
-    
-    <div class="mediaEncabezado contenedor">
-    <h1>Ensamble Polifonistas <br> <span>Media</span></h1>
-    </div>
-    
-    <section class="mediaVideos contenedor">
-        <h2 class="subtituloDePagina">Videos</h2>
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/4GUYp7z6rFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </article>
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ROO_A_w8cEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </article>
-    </section>
-    <section class="mediaGaleria contenedor">
-        <h2 class="subtituloDePagina">Galería</h2> <!-- Acá va un slideshow -->
-        <img src="../imagenes/Ensamble2.jpg" alt="Ensamble Polifonistas">
-        <img src="../imagenes/EnConcierto.jpg" alt="Ensamble Polifonistas">
-        <img src="../imagenes/Informal.jpg" alt="Ensamble Polifonistas">
-    </section>
-    <section class="mediaFlyers contenedor"> <!-- Otro slideshow -->
-        <h2 class="subtituloDePagina">Conciertos realizados</h2>
-        <img src="../imagenes/flyers3.jpg" alt="Ensamble Polifonistas">
-        <img src="../imagenes/flyers4.jpg" alt="Ensamble Polifonistas">
-        <img src="../imagenes/flyers6.jpg" alt="Ensamble Polifonistas">
-        <img src="../imagenes/flyers8.jpg" alt="Ensamble Polifonistas">
-    </section>
+        </header> 
+        <!-- Fin del Header -->
 
-<!-- Comienzo del Footer -->
-<footer>
-    <hr>
-    <div class="contenedor">
-        <div class="contenedorDelFooter">
-                        
-            <div class="footer__columna1">
-                <!-- <div class="logo">
-                    <a href="../index.html">ENSAMBLE <br> <span>POLIFONISTAS</span></a>
-                </div> -->
-                <div class="footer__newsletter">
+        <!-- Contenido de Media -->
+        
+        <section class="encabezadoMedia">
+            <div class="encabezado">
+                <h1>Ensamble Polifonistas <span>Media</span></h1>
+            </div>
+            <div class="enlacesMedia">
+                <a href="#videos" class="enlacesInternos">VIDEO</a>
+                <a href="#galeria" class="enlacesInternos">GALERIA</a>
+                <a href="#flyers" class="enlacesInternos">CONCIERTOS REALIZADOS</a>
+            </div>
+        </section>
+        
+        <section id=videos class="mediaVideos fondogris"> <!-- Aca va un rpeoductor de video. Pongo un video como placeholder -->
+            <h2 class="subtituloDePagina">Videos</h2>
+            <div class="marcoVideo">
+                <article class="contenedorIframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4GUYp7z6rFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </article>
+            </div>
+            <!-- <article>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ROO_A_w8cEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article> -->
+        </section>
+
+        <section id="galeria" class="mediaGaleria">
+            <h2 class="subtituloDePagina">Galería</h2> <!-- Acá va un slider manual. Pongo una imagen como placeholder -->
+            <img src="../imagenes/Ensamble2.jpg" alt="Ensamble Polifonistas">
+            <!-- <img src="../imagenes/EnConcierto.jpg" alt="Ensamble Polifonistas">
+            <img src="../imagenes/Informal.jpg" alt="Ensamble Polifonistas"> -->
+        </section>
+
+        <section id="flyers" class="mediaFlyers fondogris"> 
+            <h2 class="subtituloDePagina">Conciertos realizados</h2>
+            <img src="../imagenes/flyers3.jpg" alt="Ensamble Polifonistas">
+            <img src="../imagenes/flyers4.jpg" alt="Ensamble Polifonistas">
+            <img src="../imagenes/flyers6.jpg" alt="Ensamble Polifonistas">
+            <img src="../imagenes/flyers8.jpg" alt="Ensamble Polifonistas">
+        </section>
+        <!-- Fin del contenido de Media -->
+
+        <!-- Comienzo del Footer -->
+        <footer>
+            <div class="contenedorDelFooter">     
+                <div class="footer__columna1">
                     <form>
                         <label for="newsletter"><h4 class="footer__titulo">Suscríbase a nuestro newsletter</h4></label>
                         <input type="email" name="newsletter" placeholder="Ingrese su email...">
                         <input type="submit" value="Enviar">
                     </form>
                 </div>
-            </div>
 
-            <div class="footer__columna2">
-                <h4 class="footer__titulo">Síganos en nuestras redes sociales</h4>
-                <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
-                <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
-                <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
-            </div>
+                <div class="footer__columna2">
+                    <h4 class="footer__titulo">Síganos en nuestras redes sociales</h4>
+                    <div class="footer__redes">
+                        <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
+                        <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
+                        <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
+                    </div>
+                </div>
 
-            <div class="footer__columna3">
-                <h4 class="footer__titulo">Para comunicarse con nosotros</h4>
-                <a href="../paginas/contacto.html" class="boton">Ir a contacto</a>
+                <div class="footer__columna3">
+                    <h4 class="footer__titulo">Para comunicarse con nosotros</h4>
+                    <a href="contacto.html" class="boton">Ir a contacto</a>
+                </div>    
             </div>
 
             <div class="copyright">
-                <p class="copyright__texto">
-                    Copyright ©2022 Ensamble Polifonistas | Todos los derechos reservados
-                </p>
+                <p class="copyright__texto">Copyright ©2022 Ensamble Polifonistas | Todos los derechos reservados</p>
             </div>
-        </div>
+        </footer>
+        <!-- Fin del Footer -->
     </div>
-</footer>
-<!-- Fin del Footer -->
 </body>
 </html>

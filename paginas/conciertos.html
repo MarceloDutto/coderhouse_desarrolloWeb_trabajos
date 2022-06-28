@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="conciertos__contenedorDelBody contenedor">
 
-    <!-- Comienzo del Header -->
-    <header>
-        <div class="contenedor">
+        <!-- Comienzo del Header -->
+        <header>
             <div class="contenedorDelEncabezado">
                 <div class="logo">
-                    <a href="../index.html">ENSAMBLE <br> <span>POLIFONISTAS</span></a>
+                    <a href="../index.html">ENSAMBLE <span>POLIFONISTAS</span></a>
                 </div>
                 <div class="nav__menu">
                     <nav>
@@ -32,15 +32,18 @@
                     </nav>
                 </div>
             </div>
-        </div>
-    </header> 
-    <!-- Fin del Header -->
+        </header> 
+        <!-- Fin del Header -->
     
-    <div class="proximosConciertos contenedor">
-        <section class="conciertos__titulo">
-            <h1>TEMPORADA <br> <span>2022</span></h1>
+        <!-- Contenido de conciertos -->
+        <section class="temporadaTitulo">
+            <div class="temporada">
+                <span class="subtituloDePagina">TEMPORADA</span>
+                <h1>2022</h1>
+            </div>
         </section>
-        <section class="listadoConciertos"> <!-- placeholder -->
+
+        <section class="listadoConciertos">
             <div class="encabezadoConciertos">
                 <h3>JUNIO 2022</h3>
                 <hr>
@@ -66,48 +69,43 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
             </div>
         </section>
-    </div>
+        <!-- <section class="programas"> Contenido en progreso
+            <h2 class="subtituloDePagina">Programas</h2>
+        </section> -->
+        <!-- Fin de contenido de conciertos -->
        
-    <!-- Comienzo del Footer -->
-    <footer>
-        <hr>
-        <div class="contenedor">
-            <div class="contenedorDelFooter">
-                            
+        <!-- Comienzo del Footer -->
+        <footer>
+            <div class="contenedorDelFooter">     
                 <div class="footer__columna1">
-                    <!-- <div class="logo">
-                        <a href="../index.html">ENSAMBLE <br> <span>POLIFONISTAS</span></a>
-                    </div> -->
-                    <div class="footer__newsletter">
-                        <form>
-                            <label for="newsletter"><h4 class="footer__titulo">Suscríbase a nuestro newsletter</h4></label>
-                            <input type="email" name="newsletter" placeholder="Ingrese su email...">
-                            <input type="submit" value="Enviar">
-                        </form>
-                    </div>
+                    <form>
+                        <label for="newsletter"><h4 class="footer__titulo">Suscríbase a nuestro newsletter</h4></label>
+                        <input type="email" name="newsletter" placeholder="Ingrese su email...">
+                        <input type="submit" value="Enviar">
+                    </form>
                 </div>
 
                 <div class="footer__columna2">
                     <h4 class="footer__titulo">Síganos en nuestras redes sociales</h4>
-                    <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
-                    <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
-                    <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
+                    <div class="footer__redes">
+                        <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
+                        <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
+                        <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
+                    </div>
                 </div>
 
                 <div class="footer__columna3">
                     <h4 class="footer__titulo">Para comunicarse con nosotros</h4>
-                    <a href="../paginas/contacto.html" class="boton">Ir a contacto</a>
-                </div>
-
-                <div class="copyright">
-                    <p class="copyright__texto">
-                        Copyright ©2022 Ensamble Polifonistas | Todos los derechos reservados
-                    </p>
-                </div>
+                    <a href="contacto.html" class="boton">Ir a contacto</a>
+                </div>    
             </div>
-        </div>
-    </footer>
-    <!-- Fin del Footer -->
 
+            <div class="copyright">
+                <p class="copyright__texto">Copyright ©2022 Ensamble Polifonistas | Todos los derechos reservados</p>
+            </div>
+        </footer>
+        <!-- Fin del Footer -->
+
+    </div>
 </body>
 </html>

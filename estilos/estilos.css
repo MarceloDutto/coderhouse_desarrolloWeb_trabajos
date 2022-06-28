@@ -1,4 +1,6 @@
-/* ACLARACION IMPORTANTE: Algunos estilos son completamente temporarios, y la paleta de colores no es la definitiva. */
+/* ACLARACIONES: Algunos estilos son completamente temporarios, y la paleta de colores no es la definitiva. 
+                 Aun faltan editar las imagenes para que tengan el formato adecuado requerido por las secciones.
+                 Algunas elementos funcionan como placeholder de futuras implementaciones. */
 
 
 /* ESTILOS GENERALES */
@@ -69,6 +71,24 @@ img {
     font-weight: 700;
     line-height: 1.6;
     margin-bottom : 10px;
+}
+
+.enlacesInternos  {
+    font-size: 1.2rem;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    color: #e25d31;
+    border: 1px solid;
+    padding: 0.5rem 5rem;
+    text-align: center;
+}
+
+.enlacesInternos:hover {
+    background-color: #e25d31; 
+    color: white;
+}
+
+.fondogris {
+    background-color: rgba(211, 211, 211, 0.775);
 }
 
 
@@ -148,10 +168,20 @@ footer {
 }
 
 .footer__columna1 input {
-    font-size: 1.3rem;
-    padding: 3px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    border: 1px solid;
+    border-radius: 5px;
     margin-bottom: 1.5rem;
-    display: block;   
+}
+
+.footer__columna1 input:focus {
+    outline: 0;
+    border-color: #e25d31;
 }
 
 .footer__columna2 img {
@@ -257,10 +287,6 @@ main {
     margin-bottom: 10px;
 }
 
-.fondogris {
-    background-color: rgba(211, 211, 211, 0.775);
-}
-
 
 /* ESTILOS DE LA PAGINA BIOGRAFIA */
 
@@ -282,20 +308,6 @@ main {
     display: flex;
     justify-content: center;
     margin: 25px 0;
-}
-
-.enlacesBiografia a {
-    font-size: 1.2rem;
-    font-family: Verdana, Tahoma, Arial, sans-serif;
-    color: #e25d31;
-    border: 1px solid;
-    padding: 0.5rem 5rem;
-    text-align: center;
-}
-
-.enlacesBiografia a:hover {
-    background-color: #e25d31; 
-    color: white;
 }
 
 #ensambleBio, #directorBio {
@@ -331,137 +343,339 @@ main {
     
 /* ESTILOS DE LA PAGINA CONCIERTOS */
 
-.proximosConciertos {
-    background-color: white;
-    padding: 20px;
-}
-.conciertos__titulo h1 {
-    font-size: 1.6rem;
-    font-weight: 600;
+.conciertos__contenedorDelBody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "header header header"
+        "temporada calendario calendario"
+        "programas programas programas"
+        "footer footer footer";
+        background-color: white;
 }
 
-.conciertos__titulo span {
-    font-size: 8rem;
-    font-weight: 500;
+.temporadaTitulo {
+    grid-area: temporada;
+    
+}
+.temporada {
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+.temporada h1 {
+    font-size: 5.5rem;
+    font-weight: 100;
     color: #e25d31;
+    line-height: 0.8;
 }
 
 .listadoConciertos {
-    margin-left: 300px;
-    
+    grid-area: calendario;
+    padding: 20px 40px;
 }
 
 .listadoConciertos h3 {
-    font-size: 1.8rem;
-}
-
-.listadoConciertos h4 {
     font-size: 1.6rem;
 }
 
+.listadoConciertos h4 {
+    font-size: 1.4rem;
+}
+
 .listadoConciertos p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .encabezadoConciertos {
-    margin-top: 4rem;
+    margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
 .listadoConciertos .itemConcierto {
-    margin-bottom: 2rem;
-} */
+    margin-bottom: 3rem;
+} 
+
+.itemConcierto h4 {
+    margin-bottom: 3px;
+}
+
 
 /* ESTILOS DE LA PAGINA MEDIA */
 
-.mediaEncabezado {
+.media__contenedorDelBody {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "encabezadoMedia"
+    "videoGaleria"
+    "fotoGaleria"
+    "flyers"
+    "footer";
     background-color: white;
-    font-size: 1.2rem;
+}
+
+.encabezadoMedia {
+    grid-area: encabezadoMedia;
+    display: flex;
+    flex-direction: column;
+    margin: 0  auto;
+    gap: 30px;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.encabezado {
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.4;
     color: black;
-    text-align: center;
-    padding: 5rem 2rem;
 }
 
-.mediaEncabezado span {
+.enalcesMedia {
+    display: flex;
+}
+
+.encabezado span {
     color: #e25d31;
+    display: block;
 }
 
-.mediaVideos, .mediaGaleria, .mediaFlyers {
-    background-color: white;
-    padding: 5rem 2rem;
+.mediaVideos {
+    grid-area: videoGaleria;  
+    padding: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.marcoVideo {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.contenedorIframe {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.contenedorIframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mediaGaleria {
+    grid-area: fotoGaleria;
+    padding: 0 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mediaGaleria img {
+    width: 80%;
+}
+
+.mediaFlyers {
+    grid-area: flyers;
+    padding: 0 20px;   
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mediaVideos .subtituloDePagina, .mediaGaleria .subtituloDePagina, .mediaFlyers .subtituloDePagina {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 } 
 
-.mediaVideos article {
-    margin-left: 300px;
-    margin-top: 20px;
-}
-
-.mediaGaleria img {
-    width: 370px;
-    margin: 0 6px;
-}
-
 .mediaFlyers img {
-    width: 500px;
+    max-width: 500px;
+    width: 80%;
+    margin-bottom: 20px;
 }
 
 /* ESTILOS DE PAGINA CONTACTO */
 
-.contacto1, .contacto2, .contacto3, .contacto4 {
+.contacto__contenedorDelBody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    "header header header"
+    "contacto equipo equipo"
+    "redes redes redes"
+    "form form form"
+    "footer footer footer";
     background-color: white;
-    padding: 1rem 2rem;
 }
 
-.contacto3 .subtituloDePagina, .contacto4 .subtituloDePagina {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.contacto1 h3, .contacto2 h3 {
+.contacto__contenedorDelBody h3 {
     font-size: 1.8rem;
-    line-height: 1.6;
 }
 
-.contacto1 p, .contacto2 p {
-    font-size: 1.6rem;
+.contacto__contenedorDelBody h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
     line-height: 1.4;
 }
-.contacto1 a, .contacto2 a {
-    color: black;
+
+.contacto__contenedorDelBody p {
+    font-size: 1.3rem;
+    line-height: 1.4;
 }
 
-.contacto2 .team {
-    display: inline-block;
-    margin-left: 12rem;
-}
-    
-.contacto2 img {
-    width: 190px;
+.contacto__contenedorDelBody .subtituloDePagina {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-.contacto2 hr, .contacto3 hr {
-    margin-top: 2rem;
+.contacto__contenedorDelBody section {
+    padding-bottom: 100px;
+}
+
+.contacto1 {
+    grid-area: contacto;
+    margin-left: 40px;
+    margin-top: 50px;
+} 
+
+.contacto2 {
+    grid-area: equipo;
+    margin-top: 50px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorTeam {
+    display: flex;   
+    align-items: center; 
+}
+
+.team{
+    width: 50%;
+}
+
+
+.team img {
+    width: 40%;
+}
+
+.contacto3 {
+    grid-area: redes;
+    margin: 0 auto;
+}
+
+.iconosRedes {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .contacto3 img {
-    margin-left: 200px;
+    width: 70px;
 }
 
-/* El formato del formulario es temporal */ 
-.contacto4 label {
-    margin-left: 250px;
-    padding: 10px;
+.contacto4 {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
 }
 
-.contacto4 input {
-    margin: 10px;
+.contenidoContacto4 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.tituloFormulario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formFila {
+    display: flex;
+}
+.formSeccion {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.seccionLarga {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.formGrupo {
+    font-size: 1.8rem;
+    letter-spacing: .2px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.formGrupo label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formGrupo input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.formGrupo textarea {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 6px 12px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.formGrupo input:focus, .formGrupo textarea:focus {
+    outline: 0;
+    border-color: #e25d31;
+} 
+
+.botonEnviar input {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.botonEnviar input:hover {
+    border-color: gray;
 }
 
 /*Media queries*/
@@ -523,7 +737,40 @@ main {
     margin-bottom: 50px;
 }
 
+/*Contacto*/
+
+.contacto__contenedorDelBody {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+    "header"
+    "contacto"
+    "equipo"
+    "redes"
+    "form"
+    "footer";
 }
+
+.contacto1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contacto2 {
+    align-items: center;
+}
+
+.team {
+    padding-left: 80px;
+}
+
+.contacto3 img {
+    width: 50px;
+}
+
+}
+
 
 /*CELULAR*/
 
@@ -580,11 +827,11 @@ main {
         padding: 10px 45px 10px 45px;
     }
     .portada__presentacion h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .portada__presentacion h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     /*Index conciertos*/
@@ -608,4 +855,77 @@ main {
     .ensambleFotos .directorFotos {
         padding: 0 10px;
     }
+    
+    /*Conciertos*/
+
+    .conciertos__contenedorDelBody {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        "header"
+        "temporada"
+        "calendario"
+        "programas"
+        "footer";
+    }
+
+    .temporada {
+        padding-left: 20px;
+        padding-top: 60px;
+    }
+
+    .temporada h1 {
+        font-size: 4.4rem;
+    }
+
+    .listadoConciertos {
+        padding-left: 20px;
+    }
+
+    .listadoConciertos h4 {
+        font-size: 1.3rem;
+    }
+
+    /*Media*/
+
+    .enlacesMedia {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    /*Contacto*/
+
+    .contacto__contenedorDelBody .subtituloDePagina {
+        font-size: 1.7rem;
+        
+    }
+
+    .contacto1 {
+        margin-left: 0;
+    }
+
+    .contenedorTeam {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .team {
+        text-align: center;
+        padding-left: 0;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+
+    .team img {
+        padding-bottom: 20px;
+    }
+
+    .formFila {
+        flex-wrap: wrap;
+    }
+    .formSeccion {
+        width: 100%;
+    }
+
 }
