@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div class="media__contenedorDelBody contenedor">
@@ -48,7 +50,7 @@
             </div>
         </section>
         
-        <section id=videos class="mediaVideos fondogris"> <!-- Aca va un rpeoductor de video. Pongo un video como placeholder -->
+        <section id=videos class="mediaVideos"> <!-- Aca va un rpeoductor de video. Pongo un video como placeholder -->
             <h2 class="subtituloDePagina">Videos</h2>
             <div class="marcoVideo">
                 <article class="contenedorIframe">
@@ -67,12 +69,12 @@
             <img src="../imagenes/Informal.jpg" alt="Ensamble Polifonistas"> -->
         </section>
 
-        <section id="flyers" class="mediaFlyers fondogris"> 
+        <section id="flyers" class="mediaFlyers"> 
             <h2 class="subtituloDePagina">Conciertos realizados</h2>
-            <img src="../imagenes/flyers3.jpg" alt="Ensamble Polifonistas">
-            <img src="../imagenes/flyers4.jpg" alt="Ensamble Polifonistas">
-            <img src="../imagenes/flyers6.jpg" alt="Ensamble Polifonistas">
-            <img src="../imagenes/flyers8.jpg" alt="Ensamble Polifonistas">
+            <img src="../imagenes/flyers3.jpg" alt="Ensamble Polifonistas" data-aos="zoom-in-up">
+            <img src="../imagenes/flyers4.jpg" alt="Ensamble Polifonistas" data-aos="zoom-in-up">
+            <img src="../imagenes/flyers6.jpg" alt="Ensamble Polifonistas" data-aos="zoom-in-up">
+            <img src="../imagenes/flyers8.jpg" alt="Ensamble Polifonistas" data-aos="zoom-in-up">
         </section>
         <!-- Fin del contenido de Media -->
 
@@ -83,7 +85,9 @@
                     <form>
                         <label for="newsletter"><h4 class="footer__titulo">Suscríbase a nuestro newsletter</h4></label>
                         <input type="email" name="newsletter" placeholder="Ingrese su email...">
-                        <input type="submit" value="Enviar">
+                        <div class="botonEnviar">
+                            <input type="submit" value="Enviar">
+                        </div>
                     </form>
                 </div>
 
@@ -108,5 +112,10 @@
         </footer>
         <!-- Fin del Footer -->
     </div>
+
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>

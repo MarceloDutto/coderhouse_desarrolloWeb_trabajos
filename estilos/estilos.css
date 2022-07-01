@@ -14,10 +14,6 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
-
-body {
-    background-color: rgba(173, 216, 230, 0.573);
-}
   
 .contenedor {
     max-width: 1200px;
@@ -76,14 +72,15 @@ img {
 .enlacesInternos  {
     font-size: 1.2rem;
     font-family: Verdana, Tahoma, Arial, sans-serif;
-    color: #e25d31;
+    color: #e25d31f4;
     border: 1px solid;
     padding: 0.5rem 5rem;
     text-align: center;
+    transition: .2s ease;
 }
 
 .enlacesInternos:hover {
-    background-color: #e25d31; 
+    background-color: #e25d31f4; 
     color: white;
 }
 
@@ -101,7 +98,7 @@ header {
 
 .contenedorDelEncabezado {
     padding: 2rem;
-    background-color: black;
+    background-color: #012C3D;
     display: flex;
     justify-content: space-between;
 }
@@ -138,6 +135,8 @@ header {
     font-weight: 500;
     color:white;
     margin: 0.5rem;
+    border-bottom: 1px solid #e25d3100;
+    transition: .2s ease-in;
 } 
 
 .nav__lista li:hover .nav__lista--link {
@@ -148,14 +147,14 @@ header {
 
 footer {
     grid-area: footer;
-    background-color: lightcyan;
+    background-image: linear-gradient(to top, #78bcc4b4, #F7F8F3);
 }
 
 .contenedorDelFooter {
     display: flex;
     justify-content: space-around;
     gap: 10rem;
-    margin: 2rem 2rem;
+    margin: 2rem;
 }
 
 .footer__columna1 .logo {
@@ -177,6 +176,7 @@ footer {
     border: 1px solid;
     border-radius: 5px;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .footer__columna1 input:focus {
@@ -184,8 +184,18 @@ footer {
     border-color: #e25d31;
 }
 
+.footer__columna1 .botonEnviar {
+    width: 50%;
+    margin: auto;
+}
+
 .footer__columna2 img {
     width: 45px;
+    transition: .2s, ease-in;
+}
+
+.footer__columna2 img:hover {
+    transform: scale(1.1);
 }
 
 .footer__redes {
@@ -258,14 +268,15 @@ main {
 /* Sections del Index: Proximos conciertos y Noticias */
 .conciertos {
     grid-area: conciertos;
+    background-image: linear-gradient(to bottom, #78bcc442, #F7F8F3);
 }
 
 .noticias {
     grid-area: noticias;
+    background-color: #F7F8F3;
 }
 
 .index__sections {
-    background-color: white;
     padding: 3rem;
     height: 100%;
 }
@@ -300,7 +311,8 @@ main {
         "ensambleSlider ensambleTexto"
         "directorTexto directorSlider"
         "footer footer";
-        background-color: white;
+        /* background-color: #F7F8F3; */
+        background-image: linear-gradient(to bottom, #78bcc432 35%, #F7F8F3 60%);
 }
 
 .enlacesBiografia {
@@ -336,7 +348,6 @@ main {
 
 .directorTexto p, .ensambleTexto p {
     font-size: 1.3rem;
-    font-family: Verdana, Tahoma, Arial, sans-serif;
     line-height: 1.4;
 }
 
@@ -356,19 +367,57 @@ main {
 }
 
 .temporadaTitulo {
-    grid-area: temporada;
-    
-}
-.temporada {
-    padding-left: 60px;
-    padding-top: 60px;
+    grid-area: temporada;   
 }
 
-.temporada h1 {
-    font-size: 5.5rem;
-    font-weight: 100;
+/*Keyframes temporada*/
+@keyframes spanAnim {
+    0% {
+        padding-top: 0;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 10%;
+    }
+    100% {
+        padding-top: 60px;
+        opacity: 100%;
+    }
+}
+
+@keyframes H1__Anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+/*End of Keyframes temporada*/
+
+
+.temporadaSpan {
+    font-family: 'Montserrat, Verdana, Arial, sans-serif';
+    font-size: 1.4rem;
+    padding-left: 60px;
+    padding-top: 60px;
+    animation: spanAnim 1s ease-out;
+}
+
+.temporadaH1 {
+    padding-left: 60px;
+    font-family: 'Verdana, Tahoma, Arial, sans-serif';
+    font-size: 4.5rem;
     color: #e25d31;
     line-height: 0.8;
+    opacity: 0;
+    animation-name: H1__Anim;
+    animation-delay: .8s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 .listadoConciertos {
@@ -415,7 +464,7 @@ main {
     "fotoGaleria"
     "flyers"
     "footer";
-    background-color: white;
+    background-image: linear-gradient(to bottom, #78bcc432, #F7F8F3);
 }
 
 .encabezadoMedia {
@@ -453,6 +502,7 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
+    border-bottom: 2px solid #012C3D;
 }
 
 .marcoVideo {
@@ -481,6 +531,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 2px solid #012C3D;
 }
 
 .mediaGaleria img {
@@ -578,6 +629,7 @@ main {
 .contacto3 {
     grid-area: redes;
     margin: 0 auto;
+    border-bottom: 1px solid #012C3D;
 }
 
 .iconosRedes {
@@ -587,12 +639,18 @@ main {
 
 .contacto3 img {
     width: 70px;
+    transition: .2s ease-in;
+}
+
+.contacto3 img:hover {
+    transform: scale(1.1);
 }
 
 .contacto4 {
     grid-area: form;
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(to bottom, #78bcc455, #F7F8F3);
 }
 
 .contenidoContacto4 {
@@ -672,10 +730,11 @@ main {
     line-height: 1.4;
     border: 1px solid lightgrey;
     border-radius: 5px;
+    transition: .2s ease-in;
 }
 
 .botonEnviar input:hover {
-    border-color: gray;
+    border-color: #e25d31;
 }
 
 /*Media queries*/
