@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="contacto__contenedorDelBody contenedor">
+    <div class="contenedor">
     
        <!-- Comienzo del Header -->
        <header>
@@ -38,95 +38,120 @@
                 </div>
             </div>
         </div>
-    </header> 
-    <!-- Fin del Header -->
+        </header> 
+        <!-- Fin del Header -->
     
-        <section class="contacto1">
-            <div class="con1Texto">
-                <h2 class="subtituloDePagina">Contacto</h2>
-                <h3>Ensamble Polifonistas</h3>
-                <p>J. M. Moreno 693 - CABA</p>
-                <p>Tel: (+54) 11 1234 5678</p>
-                <p><a href="mailto: polifonistas@gmail.com">polifonistas@gmail.com</a></p>
+        <div class="container-fluid contenidoDeContacto">
+            <div class="row contactoFila">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"> 
+                    <section class="contacto1">
+                        <div class="con1Texto">
+                            <h2 class="subtituloDePagina">Contacto</h2>
+                            <h3>Ensamble Polifonistas</h3>
+                            <p>J. M. Moreno 693 - CABA</p>
+                            <p>Tel: (+54) 11 1234 5678</p>
+                            <p><a href="mailto: polifonistas@gmail.com">polifonistas@gmail.com</a></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <section class="contacto2">
+                        <h2 class="subtituloDePagina">Equipo</h2>
+                        <div class="contenedorTeam">
+                            <div class="team">
+                                <img src="../imagenes/director_resized.jpg" alt="Marcelo Dutto">
+                                <div class="teamTexto">
+                                    <h3>Marcelo Dutto</h3>
+                                    <h4>Director artístico<h4>
+                                    <p><a href="mailto: polifonistas@gmail.com">marcelodutto@polifonistas.com</a></p>
+                                    <p>Tel: (+54) 11 1234 5678</p>
+                                </div>
+                            </div>
+                            <div class="team">
+                                <img src="../imagenes/ProductoraEjecutiva_resized.jpg" alt="Virginia Majorel">
+                                <div class="teamTexto">
+                                    <h3>Virginia Majorel</h3>
+                                    <h4>Productora ejecutiva<h4>
+                                    <p><a href="mailto: polifonistas@gmail.com">virginiamajorel@polifonistas.com</a></p>
+                                    <p>Tel: (+54) 11 1234 5678</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section>
-        <section class="contacto2">
-            <h2 class="subtituloDePagina">Equipo</h2>
-            <div class="contenedorTeam">
-                <div class="team">
-                    <img src="../imagenes/director.jpg" alt="Marcelo Dutto">
-                    <div class="teamTexto">
-                        <h3>Marcelo Dutto</h3>
-                        <h4>Director artístico<h4>
-                        <p><a href="mailto: polifonistas@gmail.com">marcelodutto@polifonistas.com</a></p>
-                        <p>Tel: (+54) 11 1234 5678</p>
+            
+            <div class="row contactoFila">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <section class="contacto3">
+                        <form>
+                            <label for="newsletter"><h2 class="subtituloDePagina">Suscríbase a nuestro newsletter</h2></label>
+                            <input type="email" name="newsletter" placeholder="Ingrese su email...">
+                            <div class="botonEnviar">
+                                <input type="submit" value="Enviar" class="boton">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <section class="contacto4">
+                        <h2 class="subtituloDePagina">Buscanos en las redes sociales</h2>
+                        <div class="iconosRedes">
+                            <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
+                            <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
+                            <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="row contactoFila">
+                <section class="contacto5">
+                    <div class="contenidoContacto5">
+                        <div class="tituloFormulario">
+                            <h2 class="subtituloDePagina">Formulario de contacto</h2>
+                        </div>
+                        <div class="formulario">
+                            <form>
+                                <div class="formFila">
+                                    <div class="formSeccion">
+                                        <div class="formGrupo">
+                                            <label for="nombre">Nombre:</label>             
+                                            <input type="text" name="nombre" placeholder="Nombre" />
+                                        </div>            
+                                        <div class="formGrupo">
+                                            <label for="apellido">Apellido:</label> 
+                                            <input type="text" name="apellido" placeholder="Apellido" />
+                                        </div>
+                                    </div>
+                                    <div class="formSeccion">
+                                        <div class="formGrupo">
+                                            <label for="newsletter">Dirección de correo electrónico:</label>
+                                            <input type="email" name="newsletter" placeholder="Ingrese su email...">
+                                        </div>
+                                        <div class="formGrupo">
+                                            <label for="asunto">Asunto:</label>             
+                                            <input type="text" name="asunto" placeholder="Asunto" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formFila">
+                                    <div class="seccionLarga">
+                                        <div class="formGrupo">
+                                            <label for="mensaje">Escriba su mensaje:</label>
+                                            <textarea name="mensaje" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="botonEnviar formSeccion">
+                                    <input type="submit" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="team">
-                    <img src="../imagenes/ProductoraEjecutiva.jpg" alt="Virginia Majorel">
-                    <div class="teamTexto">
-                        <h3>Virginia Majorel</h3>
-                        <h4>Productora ejecutiva<h4>
-                        <p><a href="mailto: polifonistas@gmail.com">virginiamajorel@polifonistas.com</a></p>
-                        <p>Tel: (+54) 11 1234 5678</p>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
-        
-        <section class="contacto3">
-            <h2 class="subtituloDePagina">Buscanos en las redes sociales</h2>
-            <div class="iconosRedes">
-                <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
-                <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
-                <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
-            </div>
-        </section>
-        
-        <section class="contacto4">
-            <div class="contenidoContacto4">
-                <div class="tituloFormulario">
-                    <h2 class="subtituloDePagina">Formulario de contacto</h2>
-                </div>
-                <div class="formulario">
-                    <form>
-                        <div class="formFila">
-                            <div class="formSeccion">
-                                <div class="formGrupo">
-                                    <label for="nombre">Nombre:</label>             
-                                    <input type="text" name="nombre" placeholder="Nombre" />
-                                </div>            
-                                <div class="formGrupo">
-                                    <label for="apellido">Apellido:</label> 
-                                    <input type="text" name="apellido" placeholder="Apellido" />
-                                </div>
-                            </div>
-                            <div class="formSeccion">
-                                <div class="formGrupo">
-                                    <label for="newsletter">Dirección de correo electrónico:</label>
-                                    <input type="email" name="newsletter" placeholder="Ingrese su email...">
-                                </div>
-                                <div class="formGrupo">
-                                    <label for="asunto">Asunto:</label>             
-                                    <input type="text" name="asunto" placeholder="Asunto" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="formFila">
-                            <div class="seccionLarga">
-                                <div class="formGrupo">
-                                    <label for="mensaje">Escriba su mensaje:</label>
-                                    <textarea name="mensaje" cols="30" rows="10"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="botonEnviar formSeccion">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+        </div>
     
         <!-- Comienzo del Footer -->
         <footer>
