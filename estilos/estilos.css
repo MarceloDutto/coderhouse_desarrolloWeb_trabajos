@@ -1,8 +1,3 @@
-/* ACLARACIONES: Algunos estilos son completamente temporarios, y la paleta de colores no es la definitiva. 
-                 Aun faltan editar algunas imagenes para que tengan el formato adecuado requerido por las secciones.
-                 Algunas elementos funcionan como placeholder de futuras implementaciones. */
-
-
 /* ESTILOS GENERALES */
 
 * {
@@ -90,6 +85,11 @@ img {
     color: white;
 }
 
+.fondoTextura {
+    background-color: #f7f8f3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e25d31' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
 
 /* ESTILOS DEL HEADER */
 
@@ -103,7 +103,7 @@ img {
     font-size: 3.8rem;
     font-weight: 400;
     line-height: 1.2;
-    color: white;
+    color: #F7F8F3;
 }
 
 .logo span {
@@ -115,33 +115,53 @@ img {
     justify-content: flex-end;
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
+.navbar {
+    padding-top: 0;
+    width: 100%;
+}
+
+.navbar .container-fluid {
     justify-content: flex-end;
+    align-content: flex-end;
+    padding-right: 0;
 }
 
-.nav__lista {
-    min-height: 25px;
-    margin-bottom: 0;
-}
-
-.nav__lista li {
-    display: inline-block;
-}
-
-.nav__lista .nav__lista--link {
-    font-family: 'Montserrat', Verdana, Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color:white;
-    margin: 1rem;
-    border-bottom: 1px solid #e25d3100;
-    transition: .2s ease-in;
+.navbar-light .navbar-toggler {
+    border-color: #F7F8F3;
+    padding: 0.5rem 1rem;
 } 
 
-.nav__lista li:hover .nav__lista--link {
-    border-bottom: 1px solid #e25d31;
+.icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #F7F8F3;
+    border-radius: 1px;
+    margin: 3px 0;
+    
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Montserrat', Verdana, Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #F7F8F3;
+    margin: 1rem;
+    border-bottom: 1px solid #e25d3100;
+    transition: color .2s ease-in;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e25d31;
+} 
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #F7F8F3; 
+    text-shadow: 1px 1px 10px #F7F8F3;
+}
+
+.navbar-light .navbar-nav .nav-link.active:hover {
+    color: #e25d31;
 }
 
 /* ESTILOS DEL FOOTER */
@@ -171,6 +191,7 @@ footer {
     border: 1px solid;
     border-radius: 5px;
     margin-bottom: 1.5rem;
+    background-color: #F7F8F3;
 }
 
 .footer__columna1 input:focus {
@@ -246,6 +267,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     min-height: 70px;
     padding: 10px 45px 25px 45px;
+    z-index: 10;
 }
 
 .portada__presentacion h1 {
@@ -253,14 +275,18 @@ footer {
     font-weight: 400;
     font-size: 3.9rem;
     line-height: 1.4;
-    color: white;
+    color: #F7F8F3;
 }
 
 .portada__presentacion h2 {
     font-size: 1.7rem;
     line-height: 1.4;
     letter-spacing: 0.6px;
-    color: white;   
+    color: #F7F8F3;   
+}
+
+.index__portada img {
+    filter:  grayscale(90%);
 }
 
 /* Sections del Index: Proximos conciertos y Noticias */
@@ -316,9 +342,15 @@ footer {
     padding-right: 30px;
 }
 
-.directorFotos, .ensambleFotos {
-    padding: 10px;
+.ensambleFotos {
+    border: 10px solid #F7F8F3;
+    border-radius: 5px;
 }
+
+.directorFotos {
+    border: 10px solid #78bcc432;
+    border-radius: 5px;
+} 
 
 .ensambleTexto, .directorTexto {
     padding: 0 20px;
@@ -331,6 +363,11 @@ footer {
 
     
 /* ESTILOS DE LA PAGINA CONCIERTOS */
+
+.fondoFoto {
+    /* background: url(../imagenes/EnsambleByN.jpg) top left repeat-x fixed #012C3D ;  */
+    background: #012C3D;   
+}
 
 /*Keyframes temporada*/
 @keyframes spanAnim {
@@ -431,19 +468,18 @@ footer {
 .encabezadoMedia {
     display: flex;
     flex-direction: column;
-    margin: 0  auto;
+    margin: 0 auto;
     gap: 30px;
     max-width: 600px;
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 70px;
 }
 
 .encabezado {
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
-    color: black;
+    color: #012C3D;
 }
 
 .enlacesMedia {
@@ -466,8 +502,10 @@ footer {
 }
 
 .marcoVideo {
-    margin: 0 auto;
+    margin: 30px auto;
     width: 80%;
+    border: 10px solid #F7F8F3;
+    border-radius: 5px;
 }
 
 .contenedorIframe {
@@ -495,6 +533,7 @@ footer {
 
 .contenedorDeSlider {
     width: 80%;
+    border: 10px solid #F7F8F3; 
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -527,6 +566,7 @@ footer {
 .mediaFlyers img {
     max-width: 500px;
     width: 80%;
+    border: 10px solid #F7F8F3;
     margin-bottom: 20px;
 }
 
@@ -542,23 +582,23 @@ footer {
     margin-left: 0;
     margin-right: 0;
     padding-left: 20px;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .contenidoDeContacto h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
 .contenidoDeContacto h4 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #e25d31;
     line-height: 1.3;
 }
 
 .contenidoDeContacto p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 2px;
     color: #012C3D;
 }
@@ -576,10 +616,6 @@ footer {
     padding-bottom: 100px;
 }
 
- .contacto1 {
-    border-right: 1px solid #e25d31;
-} 
-
 .contacto2 {
     display: flex;
     flex-direction: column;
@@ -587,24 +623,28 @@ footer {
 }
 
 .contenedorTeam {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    gap: 20px;  
+    display: flex; 
+    justify-content: space-between;
 }
 
 .team {
-    min-width: 200px;
+    width: 45%;
     display: flex;
-    align-content: center;
-    border: 1px solid #012C3D; 
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #012C3D;
     border-radius: 10px;
-    padding: 5px;
     background-color: #F7F8F3;
 }
 
 .team img {
-    width: 30%;
+    width: 35%;
     border-radius: 50%;
 }
 
@@ -614,8 +654,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: flex-start;
 }
-
 
 .contacto3 {
     padding: 0 20px;
@@ -655,7 +695,7 @@ footer {
 }
 
 .contacto4 img {
-    width: 70px;
+    width: 60px;
     transition: .2s ease-in;
 }
 
@@ -666,7 +706,6 @@ footer {
 .contacto5 {
     display: flex;
     flex-direction: column;
-    /* background-image: linear-gradient(to bottom, #78bcc455, #F7F8F3); */
 }
 
 .contenidoContacto5 {
@@ -753,6 +792,7 @@ footer {
     border-color: #e25d31;
 }
 
+
 /*Media queries*/
 
 /*TABLET*/
@@ -761,22 +801,32 @@ footer {
 
 /*Header*/
 
-.logo {
-    justify-content: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+.offcanvas {
+    background-color: #f7f8f3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e25d31' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-nav {
-    justify-content: center;
+.offcanvas-header {
+    margin: 10px;
+    background-color: #012C3D;
+    min-height: 50px;   
 }
 
-.nav__menu {
-    text-align: right;
+.offcanvas-header .btn-close {
+    padding-left: 2rem;
+    background-color: #F7F8F3;
+    color: #012C3D;
+
 }
 
-.nav__lista {
-    padding-left: 0;
+.offcanvas-body {
+    margin: 10px;
+    background-color: #012C3D;
+    background-image: linear-gradient(to bottom, #78bcc442, #F7F8F3);
+}
+
+.offcanvas-backdrop.show {
+    opacity: .8;
 }
 
 /* Footer */
@@ -807,7 +857,7 @@ nav {
 /*Contacto*/
 
 .contenidoDeContacto h4 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .contenidoDeContacto h3 {
@@ -815,7 +865,7 @@ nav {
 }
 
 .contenidoDeContacto p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .contenidoDeContacto .subtituloDePagina {
@@ -824,10 +874,12 @@ nav {
 
 .contenedorTeam {
     flex-direction: column;
+    gap: 20px;
 }
 
 .team {
-    padding-top: 10px;
+    width: 70%;
+    margin: 0 auto
 }
 
 .contacto3 img {
@@ -837,6 +889,7 @@ nav {
 .contacto4 img {
     width: 55%;
 }
+
 }
 
 
@@ -853,7 +906,6 @@ nav {
     /*Header*/
 
     .logo {
-        justify-content: center;
         text-align: center;
     }
 
@@ -861,18 +913,13 @@ nav {
         font-size: 3rem;
     }
 
-    .nav__menu {
+    .navbar-toggler {
         justify-content: center;
     }
 
-    .nav__lista li {
-        display: block;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .nav__lista .nav__lista--link {
-        font-size: 1.3rem;
+    .navbar .container-fluid {
+        justify-content: center;
+        margin-top: 20px;
     }
 
     /*Footer*/
@@ -989,7 +1036,7 @@ nav {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-left: 0;
+        padding-left: 0px;
         padding-top: 30px;
         padding-bottom: 30px;
         width: 100%;
@@ -1004,6 +1051,10 @@ nav {
         font-size: 1.2rem;
     }
 
+    .contacto3 .botonEnviar{
+        width: 60%;
+        text-align: center;
+    }
     .formFila {
         flex-wrap: wrap;
     }

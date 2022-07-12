@@ -13,7 +13,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="fondoFoto">
     <div class="contenedor">
 
         <!-- Comienzo del Header -->
@@ -26,14 +26,38 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-7 col-lg-9 nav__menu">
-                        <nav>
-                            <ul class="nav__lista">
-                                <li><a href="../index.html" class="nav__lista--link">POLIFONISTAS</a></li>
-                                <li><a href="biografia.html" class="nav__lista--link">BIOGRAFIA</a></li>
-                                <li><a href="conciertos.html" class="nav__lista--link">CONCIERTOS</a></li>
-                                <li><a href="media.html" class="nav__lista--link">MEDIA</a></li>
-                                <li><a href="contacto.html" class="nav__lista--link">CONTACTO</a></li>
-                            </ul>
+                        <nav class="navbar navbar-light navbar-expand-lg">
+                            <div class="container-fluid">
+                              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                  <ul class="navbar-nav justify-content-end flex-grow-1">
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="../index.html">POLIFONISTAS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="biografia.html">BIOGRAFIA</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="conciertos.html">CONCIERTOS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="media.html">MEDIA</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contacto.html">CONTACTO</a>
+                                    </li>              
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -58,25 +82,59 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <section class="listadoConciertos">
                         <div class="encabezadoConciertos">
-                            <h3>JUNIO 2022</h3>
-                        </div>
-                        <div class="itemConcierto">
-                            <h4>Miercoles 22 - 20 hs | La polifonía flamenca en el siglo XV | Santuario Santa Rita - Cabildo 4367 CABA</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
-                        </div>
-                        <div class="itemConcierto">
-                            <h4>Viernes 24 - 20 hs | La polifonía flamenca en el siglo XV | Iglesia Luterana - Rivadavia 6745 CABA</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
-                        </div>
-                        <div class="encabezadoConciertos">
                             <h3>AGOSTO 2022</h3>
                         </div>
                         <div class="itemConcierto">
-                            <h4>Martes 16 - 20 hs | El arte de Josquin Desprez | Santuario Santa Rita - Cabildo 4367 CABA</h4>
+                            <h4>Miercoles 25 - 20 hs | La polifonía flamenca en el siglo XV | Santuario Santa Rita - Cabildo 4367 CABA</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
                         </div>
                         <div class="itemConcierto">
-                            <h4>Jueves 25 - 20 hs | La polifonía flamenca en el siglo XV | Auditorio Beethoven - 9 de Julio 367 CABA</h4>
+                            <h4>Viernes 27 - 20 hs | La polifonía flamenca en el siglo XV | Iglesia Luterana - Rivadavia 6745 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="encabezadoConciertos">
+                            <h3>SEPTIEMBRE 2022</h3>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Martes 6 - 20 hs | El arte de Josquin Desprez | Santuario Santa Rita - Cabildo 4367 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Jueves 15 - 20 hs | La polifonía flamenca en el siglo XV | Auditorio Beethoven - 9 de Julio 367 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Sabado 25 - 20 hs | Missa praeter rerum seriem de Cipriano de Rore | Iglesia Anglicana - 25 de mayo 367 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Domingo 26 - 20 hs | Missa praeter rerum seriem de Cipriano de Rore | Catedral de La PLata - Diagonal 44 297 La Plata</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="encabezadoConciertos">
+                            <h3>OCTUBRE 2022</h3>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Sábado 8 - 20 hs | El arte de Josquin Desprez | Santuario Santa Rita - Cabildo 4367 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Domingo 16 - 20 hs | El arte de Josquin Desprez | Auditorio Beethoven - 9 de Julio 367 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Viernes 21 - 20 hs | Missa praeter rerum seriem de Cipriano de Rore | Auditorio Beethoven - 9 de Julio 367 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="encabezadoConciertos">
+                            <h3>NOVIEMBRE 2022</h3>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Sábado 2 - 20 hs | El arte de Josquin Desprez | Auditorio de Belgrano - Virrey Loreto 2213 CABA</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
+                        </div>
+                        <div class="itemConcierto">
+                            <h4>Viernes 8 - 20 hs | La polifonía flamenca en el siglo XV | Iglesia Caacupé - Av. Rivadavia 5721 367 CABA</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ab labore eaque iste magni inventore eum cum esse quibusdam blanditiis.</p>
                         </div>
                     </section>

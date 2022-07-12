@@ -13,27 +13,51 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="fondoTextura">
     <div class="contenedor">
     
        <!-- Comienzo del Header -->
        <header>
         <div class="container-fluid contenedorDelEncabezado">
             <div class="row">
-                <div class="col-xs-6 col-md-5 col-lg-3">
+                <div class="col-md-5 col-lg-3">
                     <div class="logo">
                         <a href="../index.html">ENSAMBLE <span>POLIFONISTAS</span></a>
                     </div>
                 </div>
-                <div class="col-xs-6 col-md-7 col-lg-9 nav__menu">
-                    <nav>
-                        <ul class="nav__lista">
-                            <li><a href="../index.html" class="nav__lista--link">POLIFONISTAS</a></li>
-                            <li><a href="biografia.html" class="nav__lista--link">BIOGRAFIA</a></li>
-                            <li><a href="conciertos.html" class="nav__lista--link">CONCIERTOS</a></li>
-                            <li><a href="media.html" class="nav__lista--link">MEDIA</a></li>
-                            <li><a href="contacto.html" class="nav__lista--link">CONTACTO</a></li>
-                        </ul>
+                <div class="col-md-7 col-lg-9 nav__menu">
+                    <nav class="navbar navbar-light navbar-expand-lg">
+                        <div class="container-fluid">
+                          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                              <ul class="navbar-nav justify-content-end flex-grow-1">
+                                <li class="nav-item">
+                                  <a class="nav-link" href="../index.html">POLIFONISTAS</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="biografia.html">BIOGRAFIA</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="conciertos.html">CONCIERTOS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="media.html">MEDIA</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a>
+                                </li>              
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -57,7 +81,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <section class="contacto2">
                         <h2 class="subtituloDePagina">Equipo</h2>
-                        <div class="contenedorTeam">
+                        <div class="row contenedorTeam">
                             <div class="team">
                                 <img src="../imagenes/director_resized.jpg" alt="Marcelo Dutto">
                                 <div class="teamTexto">
@@ -95,7 +119,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <section class="contacto4">
-                        <h2 class="subtituloDePagina">Buscanos en las redes sociales</h2>
+                        <h2 class="subtituloDePagina">Síganos en las redes sociales</h2>
                         <div class="iconosRedes">
                             <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
                             <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
