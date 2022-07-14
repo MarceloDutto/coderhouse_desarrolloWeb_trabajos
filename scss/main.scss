@@ -1,0 +1,121 @@
+/* VARIABLES*/
+
+/*Paleta de colores*/ 
+
+$color__darkBlue: #012C3D;
+$color__lightBlue: #78bcc442;
+$color__orangeHighlight: #e25d31;
+$color__softWhite: #F7F8F3;
+
+/*Fonts*/
+
+$font__titulos: 'Montserrat', Verdana, Arial, sans-serif;
+$font__parrafos: Verdana, Tahoma, Arial, sans-serif;
+
+
+/*ESTILOS GENERALES*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+  
+.contenedor {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: $color__softWhite;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font__titulos;
+}
+
+p {
+    font-family: $font__parrafos;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.boton {
+    color: $color__softWhite;
+    background: $color__orangeHighlight;
+    font-size: 1.3rem;
+    font-family: $font__titulos;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 1rem 1.8rem;
+}
+
+.boton:hover {
+    color: $color__softWhite;
+}
+
+.boton_Info {
+    font-size: 1.1rem;
+    font-family: $font__parrafos;
+    border: 1px solid $color__darkBlue;
+    border-radius: 3px;
+    padding: .5rem;
+    margin-top: 10px;
+}
+
+.subtituloDePagina {
+    font-size: 1.9rem;
+    font-family: $font__titulos;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom : 10px;
+}
+
+.enlacesInternos  {
+    font-size: 1.2rem;
+    font-family: $font__parrafos;
+    color: #e25d31f4;
+    border: 1px solid;
+    padding: 0.5rem 5rem;
+    text-align: center;
+    transition: .2s ease;
+    &:hover {
+        background-color: #e25d31f4; 
+        color: white;
+    }
+}
+
+.fondoTextura {
+    background-color: $color__softWhite;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e25d31' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+@import "header&footer";
+@import "index";
+@import "biografia";
+@import "conciertos";
+@import "media";
+@import "contacto";
+
+
+/*MEDIA QUERIES*/ 
+
+@media screen and (max-width: 500px) {
+    .subtituloDePagina {
+        font-size: 1.6rem;
+    }
+}

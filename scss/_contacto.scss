@@ -1,0 +1,324 @@
+/*Estilo de la pagina Contacto*/
+
+.contenidoDeContacto {
+    background-color: $color__softWhite;
+    background-image: linear-gradient(to bottom, #78bcc455, $color__softWhite);
+    padding-top: 50px;
+}
+
+.contactoFila {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    h4 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $color__orangeHighlight;
+        line-height: 1.3;
+    }
+    p {
+        font-size: 1.3rem;
+        margin-bottom: 2px;
+        color: $color__darkBlue;
+    }
+    a {
+        color: $color__darkBlue;
+    }
+    .subtituloDePagina {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    section {
+        padding-bottom: 100px;
+    }
+}
+
+.contacto2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.contenedorTeam {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.team {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid $color__darkBlue;
+    border-radius: 10px;
+    background-color: $color__softWhite;
+    img {
+        width: 35%;
+        border-radius: 50%;
+    }
+}
+
+.teamTexto {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.contacto3 {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    input {
+        display: block;
+        width: 100%;
+        height: 34px;
+        background-color: $color__softWhite;
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        border: 1px solid;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        &:focus {
+            outline: 0;
+            border-color: $color__orangeHighlight; 
+        }
+    }
+    .botonEnviar {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+.contacto4 {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    img {
+        width: 60px;
+        transition: .2s ease-in;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.iconosRedes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacto5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenidoContacto5 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.tituloFormulario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formFila {
+    display: flex;
+}
+
+.formSeccion {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.seccionLarga {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.formGrupo {
+    font-size: 1.8rem;
+    letter-spacing: .2px;
+    margin-bottom: 15px;
+    line-height: 25px;
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 34px;
+        background-color: $color__softWhite;
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        border: 1px solid;
+        border-radius: 5px;
+        &:focus {
+            outline: 0;
+            border-color: $color__orangeHighlight;
+        }
+    }
+    textarea {
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: $color__softWhite;
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        border: 1px solid;
+        border-radius: 5px;
+        &:focus {
+            outline: 0;
+            border-color: $color__orangeHighlight;
+        }
+    }
+}
+
+.botonEnviar {
+    input {
+        display: inline-block;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 6px 25px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        border: 1px solid $color__darkBlue;
+        border-radius: 5px;
+        transition: .2s ease-out;
+        &:hover {
+            border-color: $color__orangeHighlight;
+            color: $color__orangeHighlight;
+        }
+    }
+}
+
+
+/*MEDIA QUERIES*/
+
+/*TABLET*/
+
+@media screen and (max-width: 768px) {
+    .contenidoDeContacto {
+        h4 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .subtituloDePagina {
+            font-size: 2rem;
+        }
+    }
+
+    .contenedorTeam {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .team {
+        width: 70%;
+        margin: 0 auto
+    }
+    .contacto3 {
+        img {
+            width: 40px;
+        }
+    }
+    .contacto4 {
+        img {
+            width: 55%;
+        }
+    }
+}
+
+/*CELULAR*/
+
+@media screen and (max-width: 500px) {
+    .contenidoDeContacto {
+        section {
+            padding-bottom: 50px;
+        }
+        .subtituloDePagina {
+            font-size: 1.7rem;
+            text-align: center;   
+        }
+    }
+    .contacto1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-right: none;
+    }
+    .contacto2 {
+        padding: 5px;
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .contenedorTeam {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .team {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        img {
+            width: 50%;
+            padding-bottom: 20px;
+        }
+    }
+    .contacto3 {
+        .botonEnviar{
+            width: 60%;
+            text-align: center;
+        }
+    }
+    .formFila {
+        flex-wrap: wrap;
+    }
+    .formSeccion {
+        width: 100%;
+    }
+    .contacto5 {
+        .botonEnviar {
+            text-align: center;
+        }
+        label {
+            font-size: 1.4rem;
+        }
+    }
+}

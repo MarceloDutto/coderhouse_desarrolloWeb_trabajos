@@ -1,0 +1,64 @@
+/*Estilos de la pagina Biografia*/
+
+.biografia__contenedorDelBody {
+    background-image: linear-gradient(to bottom, #78bcc432 35%, $color__softWhite 65%);
+}
+
+.enlacesBiografia {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.filaBio {
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.ensambleFotos {
+    border: 10px solid $color__softWhite;
+    border-radius: 5px;
+}
+
+.directorFotos {
+    border: 10px solid #78bcc432;
+    border-radius: 5px;
+} 
+
+.ensambleTexto {
+    padding: 0 20px;
+    p {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+}
+
+.directorTexto {
+    padding: 0 20px;
+    p {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+}
+
+/*MEDIA QUERIES*/
+
+/*CELULAR*/ 
+
+@media screen and (max-width: 500px) {
+
+    .enlacesBiografia {
+        flex-wrap: wrap;
+        gap: 0.1rem;
+        text-align: center;
+        a {
+            font-size: 0.9rem;
+        }
+    }
+
+    .ensambleFotos .directorFotos {
+        padding: 0 10px;
+    }
+}

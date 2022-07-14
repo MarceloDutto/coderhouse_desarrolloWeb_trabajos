@@ -1,0 +1,128 @@
+/*Estilos de la pagina Conciertos*/ 
+
+.fondoFoto {
+    background: $color__darkBlue;   /*estilo temporal*/
+}
+
+/*Keyframes temporada*/
+@keyframes spanAnim {
+    0% {
+        padding-top: 0;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 10%;
+    }
+    100% {
+        padding-top: 60px;
+        opacity: 100%;
+    }
+}
+
+@keyframes H1__Anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+/*End of Keyframes temporada*/
+
+.temporadaSpan {
+    padding-left: 20px;
+    padding-top: 60px;
+    animation: spanAnim 1s ease-out;
+    span {
+        font-family: $font__titulos;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.6;
+    }
+}
+
+.temporadaH1 {
+    padding-left: 20px;
+    opacity: 0;
+    animation-name: H1__Anim;
+    animation-delay: .8s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    h1 {
+        font-family: $font__parrafos;
+        font-size: 6rem;
+        color: $color__orangeHighlight;
+        font-weight: 500;
+        line-height: 0.8;
+    }
+}
+
+.listadoConciertos {
+    padding: 20px 40px;
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    h4 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    .itemConcierto {
+        margin-bottom: 3rem;
+        h4 {
+            margin-bottom: 3px;
+        }
+    } 
+}
+
+.encabezadoConciertos {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $color__darkBlue;
+}
+
+
+/*MEDIA QUERIES*/
+
+/*TABLET*/
+
+@media screen and (max-width: 768px) {
+    .temporadaSpan, .temporadaH1 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/*CELULAR*/
+
+@media screen and (max-width: 500px) {
+
+    .termporadaAnimContaniner {
+        position:static;
+        height: 150px;
+    }
+
+    .temporadaSpan, .temporadaH1 {
+        display: flex;
+        padding-left: 0;
+        justify-content: center;
+        
+    }
+
+    .temporada h1 {
+        font-size: 4.4rem;    
+    }
+
+    .listadoConciertos {
+        padding-left: 20px;
+        h4 {
+            font-size: 1.3rem;
+        }
+    }
+}

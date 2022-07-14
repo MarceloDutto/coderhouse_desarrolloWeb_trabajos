@@ -1,0 +1,125 @@
+/*Estilos de la pagina Media*/
+
+.media__contenedorDelBody {
+    background-image: linear-gradient(to bottom, #78bcc432, $color__softWhite);
+}
+
+.encabezadoMedia {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 30px;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.encabezado {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: $color__darkBlue;
+    span {
+        color: $color__orangeHighlight;
+        display: block;
+    }
+}
+
+.enlacesMedia {
+    display: flex;
+    justify-content: center;
+}
+
+.mediaVideos { 
+    padding: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-bottom: 2px solid $color__darkBlue;
+}
+
+.marcoVideo {
+    margin: 30px auto;
+    width: 80%;
+    border: 10px solid $color__softWhite;
+    border-radius: 5px;
+}
+
+.contenedorIframe {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mediaGaleria {
+    padding: 0 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid $color__darkBlue;
+}
+
+.contenedorDeSlider {
+    width: 80%;
+    border: 10px solid $color__softWhite; 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 4%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon { 
+    background-color: $color__orangeHighlight;
+    height: 50px;
+}
+    
+.carousel-indicators .active { 
+    background-color: $color__orangeHighlight; 
+}
+
+.mediaVideos .subtituloDePagina, .mediaGaleria .subtituloDePagina, .mediaFlyers .subtituloDePagina {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+} 
+
+.mediaFlyers {
+    padding: 0 20px;   
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        max-width: 500px;
+        width: 80%;
+        border: 10px solid $color__softWhite;
+        margin-bottom: 20px;
+        }
+}
+
+
+/*MEDIA QUERIES*/ 
+
+/*CELULAR*/
+
+@media screen and (max-width: 500px) {
+
+    .enlacesMedia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        .enlacesInternos {
+            width: 60%;
+        }
+    }
+}
