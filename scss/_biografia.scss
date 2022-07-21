@@ -1,12 +1,11 @@
 /*Estilos de la pagina Biografia*/
 
 .biografia__contenedorDelBody {
-    background-image: linear-gradient(to bottom, #78bcc432 35%, $color__softWhite 65%);
+    background-image: linear-gradient(to bottom, #78bcc432 35%, map-get($paletaDeColores, softWhite) 65%);
 }
 
 .enlacesBiografia {
-    display: flex;
-    justify-content: center;
+    @include myflex (row, nowrap, center, flex-start);
     padding: 50px 0;
 }
 
@@ -18,13 +17,16 @@
 }
 
 .ensambleFotos {
-    border: 10px solid $color__softWhite;
+    border: 10px solid map-get($paletaDeColores, softWhite);
     border-radius: 5px;
 }
 
 .directorFotos {
     border: 10px solid #78bcc432;
     border-radius: 5px;
+    img {
+        filter: grayscale(100%);
+    }
 } 
 
 .ensambleTexto {

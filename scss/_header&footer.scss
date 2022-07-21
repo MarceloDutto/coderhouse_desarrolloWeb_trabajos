@@ -1,7 +1,7 @@
 /*ESTILOS DEL HEADER*/
 
 .contenedorDelEncabezado {
-    background-color: $color__darkBlue;
+    background-color: map-get($paletaDeColores, darkerBlue);
     padding: 20px 30px;
 }
 
@@ -11,31 +11,29 @@
         font-size: 3.8rem;
         font-weight: 400;
         line-height: 1.2;
-        color: $color__softWhite;
+        color: map-get($paletaDeColores, softWhite)
     }
     span {
-        color: $color__orangeHighlight;
+        color: map-get($paletaDeColores, orangeHighlight);
     }
 }
 
 .nav__menu {
-    display: flex;
-    justify-content: flex-end;
+    @include myflex (row, nowrap, flex-end, flex-start);
 }
 
 .navbar {
     padding-top: 0;
     width: 100%;
     .container-fluid {
-        justify-content: flex-end;
-        align-content: flex-end;
+        @include myflex (row, nowrap, flex-end, flex-end);
         padding-right: 0;
     }
 }
 
 .navbar-light { 
     .navbar-toggler {
-        border-color: $color__softWhite;
+        border-color: map-get($paletaDeColores, softWhite);
         padding: 0.5rem 1rem;
     }
     .navbar-nav {
@@ -43,19 +41,19 @@
             font-family: $font__titulos;
             font-size: 1.4rem;
             font-weight: 500;
-            color: $color__softWhite;
+            color: map-get($paletaDeColores, softWhite);
             margin: 1rem;
             border-bottom: 1px solid #e25d3100;
             transition: color .2s ease-in;
             &:hover {
-                color: $color__orangeHighlight;
+                color: map-get($paletaDeColores, orangeHighlight);
             }
         }
         .nav-link.active {
-            color: $color__softWhite; 
-            text-shadow: 1px 1px 10px $color__softWhite;
+            color: map-get($paletaDeColores, softWhite);
+            text-shadow: 1px 1px 10px map-get($paletaDeColores, softWhite);
             &:hover {
-                color: $color__orangeHighlight;
+                color: map-get($paletaDeColores, orangeHighlight);
             }
         }
     }
@@ -65,7 +63,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    background-color: $color__softWhite;
+    background-color: map-get($paletaDeColores, softWhite);
     border-radius: 1px;
     margin: 3px 0;   
 }
@@ -73,25 +71,23 @@
 /*ESTILOS DEL FOOTER*/
 
 footer {
-    background-image: linear-gradient(to top, #78bcc4b4, $color__softWhite);
+    background-image: linear-gradient(to top, #78bcc4b4, map-get($paletaDeColores, softWhite));
 }
 
 .contenedorDelFooter {
     padding-top: 70px;
-    border-top: 1px $color__orangeHighlight solid;
+    border-top: 1px map-get($paletaDeColores, orangeHighlight) solid;
 } 
 
 .footer__titulo {
+    @extend .subtituloDePagina;
     font-size: 1.4rem;
-    font-weight: 600;
     margin-bottom: 2rem;
 }
 
 .footer__columna1 {
+    @include myflex (row, nowrap, center, center);
     padding: 10px 40px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     input {
         display: block;
         width: 100%;
@@ -102,15 +98,19 @@ footer {
         border: 1px solid;
         border-radius: 5px;
         margin-bottom: 1.5rem;
-        background-color: $color__softWhite;
+        background-color: map-get($paletaDeColores, softWhite);
         &:focus {
             outline: 0;
-            border-color: $color__orangeHighlight;
+            border-color: map-get($paletaDeColores, orangeHighlight);
         }
     }
     .botonEnviar {
         width: 50%;
         margin: auto;
+        input:hover {
+            color: map-get($paletaDeColores, orangeHighlight);
+            border-color: map-get($paletaDeColores, orangeHighlight);
+        }
     }
 }
 
@@ -118,7 +118,7 @@ footer {
     padding: 10px 40px;
     text-align: center;
     img {
-        width: 50px;
+        width: 45px;
         transition: scale .2s, ease-in;
         &:hover {
             transform: scale(1.1);
@@ -127,9 +127,8 @@ footer {
 }
 
 .footer__redes {
+    @include myflex (row, nowrap, space-evenly, flex-start);
     margin-top: 40px;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .footer__columna3 {
@@ -158,25 +157,25 @@ footer {
     /*Header*/
 
     .offcanvas {
-        background-color: $color__softWhite;
+        background-color: map-get($paletaDeColores, softWhite);
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e25d31' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     }
 
     .offcanvas-header {
         margin: 10px;
-        background-color: $color__darkBlue;
+        background-color: map-get($paletaDeColores, darkerBlue);
         min-height: 50px;
         .btn-close {
             padding-left: 2rem;
-            background-color: $color__softWhite;
-            color: $color__darkBlue;
+            background-color: map-get($paletaDeColores, softWhite);
+            color: map-get($paletaDeColores, darkerBlue);
         }   
     }
 
     .offcanvas-body {
         margin: 10px;
-        background-color: $color__darkBlue;
-        background-image: linear-gradient(to bottom, #78bcc442, $color__softWhite);
+        background-color: map-get($paletaDeColores, darkerBlue);
+        background-image: linear-gradient(to bottom, #78bcc442, map-get($paletaDeColores, softWhite));
     }
 
     .offcanvas-backdrop.show {

@@ -1,7 +1,7 @@
 /*Estilos de la pagina Conciertos*/ 
 
 .fondoFoto {
-    background: $color__darkBlue;   /*estilo temporal*/
+    background: map-get($paletaDeColores, darkerBlue);   /*estilo temporal*/
 }
 
 /*Keyframes temporada*/
@@ -54,7 +54,7 @@
     h1 {
         font-family: $font__parrafos;
         font-size: 6rem;
-        color: $color__orangeHighlight;
+        color: map-get($paletaDeColores, orangeHighlight);
         font-weight: 500;
         line-height: 0.8;
     }
@@ -84,7 +84,7 @@
 .encabezadoConciertos {
     margin-top: 5rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid $color__darkBlue;
+    border-bottom: 1px solid map-get($paletaDeColores, darkerBlue);
 }
 
 
@@ -109,10 +109,8 @@
     }
 
     .temporadaSpan, .temporadaH1 {
-        display: flex;
+        @include myflex (row, nowrap, center, flex-start);
         padding-left: 0;
-        justify-content: center;
-        
     }
 
     .temporada h1 {

@@ -1,8 +1,8 @@
 /*Estilo de la pagina Contacto*/
 
 .contenidoDeContacto {
-    background-color: $color__softWhite;
-    background-image: linear-gradient(to bottom, #78bcc455, $color__softWhite);
+    background-color: map-get($paletaDeColores, softWhite);
+    background-image: linear-gradient(to bottom, #78bcc455, map-get($paletaDeColores, softWhite));
     padding-top: 50px;
 }
 
@@ -18,51 +18,70 @@
     h4 {
         font-size: 1.6rem;
         font-weight: 500;
-        color: $color__orangeHighlight;
+        color: map-get($paletaDeColores, orangeHighlight);
         line-height: 1.3;
     }
     p {
         font-size: 1.3rem;
         margin-bottom: 2px;
-        color: $color__darkBlue;
+        color: map-get($paletaDeColores, darkerBlue);
     }
     a {
-        color: $color__darkBlue;
+        color: map-get($paletaDeColores, darkerBlue);
     }
     .subtituloDePagina {
         font-size: 2.5rem;
         margin-bottom: 40px;
     }
     section {
-        padding-bottom: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+.contacto1 {
+    padding: 0 10px;
+}
+
+.con1Texto  {
+    height: 30rem;
+    border: 1px solid map-get($paletaDeColores, darkerBlue);
+    border-radius: 10px;
+    background-color: map-get($paletaDeColores, softWhite);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include myflex (column, wrap, center, center);
+    align-items: center;
+    text-align: center;
+    img {
+        width: 45px;
+        margin-top: 10px;
     }
 }
 
 .contacto2 {
-    display: flex;
-    flex-direction: column;
     padding: 0 10px;
 }
 
 .contenedorTeam {
-    display: flex; 
-    justify-content: space-between;
+    @include myflex (row, nowrap, space-evenly, flex-start);
 }
 
 .team {
+    @include myflex (column, nowrap, flex-start, flex-start);
     width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     text-align: center;
     margin: 0 10px;
     padding-left: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid $color__darkBlue;
+    padding-right: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px solid map-get($paletaDeColores, darkerBlue);
     border-radius: 10px;
-    background-color: $color__softWhite;
+    background-color: map-get($paletaDeColores, softWhite);
     img {
         width: 35%;
         border-radius: 50%;
@@ -72,22 +91,20 @@
 .teamTexto {
     padding-left: 10px;
     padding-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
 }
 
 .contacto3 {
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
+    @include myflex (column, nowrap, center, flex-start);
+    height: 250px;
+    padding: 30px 20px;
     text-align: center;
+    border: 1px solid map-get($paletaDeColores, darkerBlue);
+    border-radius: 10px;
     input {
         display: block;
         width: 100%;
         height: 34px;
-        background-color: $color__softWhite;
+        background-color: map-get($paletaDeColores, softWhite);
         padding: 6px 12px;
         font-size: 1.4rem;
         line-height: 1.4;
@@ -96,7 +113,7 @@
         margin-bottom: 10px;
         &:focus {
             outline: 0;
-            border-color: $color__orangeHighlight; 
+            border-color: map-get($paletaDeColores, orangeHighlight); 
         }
     }
     .botonEnviar {
@@ -106,11 +123,12 @@
 }
 
 .contacto4 {
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    @include myflex (column, nowrap, flex-start, center);
+    height: 250px;
+    padding: 44px 20px;
     text-align: center;
+    border: 1px solid map-get($paletaDeColores, darkerBlue);
+    border-radius: 10px;
     img {
         width: 60px;
         transition: .2s ease-in;
@@ -121,13 +139,11 @@
 }
 
 .iconosRedes {
-    display: flex;
-    justify-content: space-evenly;
+    @include myflex (row, nowrap, space-evenly, flex-start);
 }
 
 .contacto5 {
-    display: flex;
-    flex-direction: column;
+    @include myflex (column, nowrap, flex-start, flex-start);
 }
 
 .contenidoContacto5 {
@@ -141,7 +157,7 @@
 }
 
 .formFila {
-    display: flex;
+    @include myflex (row, nowrap, flex-start, flex-start);
 }
 
 .formSeccion {
@@ -171,7 +187,7 @@
         display: block;
         width: 100%;
         height: 34px;
-        background-color: $color__softWhite;
+        background-color: map-get($paletaDeColores, softWhite);
         padding: 6px 12px;
         font-size: 1.4rem;
         line-height: 1.4;
@@ -179,14 +195,14 @@
         border-radius: 5px;
         &:focus {
             outline: 0;
-            border-color: $color__orangeHighlight;
+            border-color: map-get($paletaDeColores, orangeHighlight);
         }
     }
     textarea {
         display: block;
         width: 100%;
         height: auto;
-        background-color: $color__softWhite;
+        background-color: map-get($paletaDeColores, softWhite);
         padding: 6px 12px;
         font-size: 1.4rem;
         line-height: 1.4;
@@ -194,7 +210,7 @@
         border-radius: 5px;
         &:focus {
             outline: 0;
-            border-color: $color__orangeHighlight;
+            border-color: map-get($paletaDeColores, orangeHighlight);
         }
     }
 }
@@ -209,12 +225,12 @@
         padding: 6px 25px;
         font-size: 1.4rem;
         line-height: 1.4;
-        border: 1px solid $color__darkBlue;
+        border: 1px solid map-get($paletaDeColores, darkerBlue);
         border-radius: 5px;
         transition: .2s ease-out;
         &:hover {
-            border-color: $color__orangeHighlight;
-            color: $color__orangeHighlight;
+            border-color: map-get($paletaDeColores, orangeHighlight);
+            color: map-get($paletaDeColores, orangeHighlight);
         }
     }
 }
@@ -240,9 +256,17 @@
         }
     }
 
+    .contacto1 {
+        text-align: center;
+    }
+
     .contenedorTeam {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .contacto2 {
+        text-align: center;
     }
     .team {
         width: 70%;
@@ -273,10 +297,13 @@
         }
     }
     .contacto1 {
-        display: flex;
-        justify-content: center;
+        @include myflex (column, wrap, center, center);
         text-align: center;
-        border-right: none;
+    }
+
+    .con1Texto {
+        width: 100%;
+        flex-wrap: nowrap;
     }
     .contacto2 {
         padding: 5px;
@@ -285,8 +312,7 @@
         }
     }
     .contenedorTeam {
-        flex-direction: column;
-        justify-content: space-between;
+        @include myflex (column, nowrap, space-between, flex-start);
     }
     .team {
         flex-direction: column;

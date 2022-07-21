@@ -1,12 +1,11 @@
 /*Estilos de la pagina Media*/
 
 .media__contenedorDelBody {
-    background-image: linear-gradient(to bottom, #78bcc432, $color__softWhite);
+    background-image: linear-gradient(to bottom, #78bcc432, map-get($paletaDeColores, softWhite));
 }
 
 .encabezadoMedia {
-    display: flex;
-    flex-direction: column;
+    @include myflex (column, nowrap, flex-start, flex-start);
     margin: 0 auto;
     gap: 30px;
     max-width: 600px;
@@ -18,31 +17,27 @@
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4;
-    color: $color__darkBlue;
+    color: map-get($paletaDeColores, darkerBlue);
     span {
-        color: $color__orangeHighlight;
+        color: map-get($paletaDeColores, orangeHighlight);
         display: block;
     }
 }
 
 .enlacesMedia {
-    display: flex;
-    justify-content: center;
+    @include myflex (row, nowrap, center, flex-start);
 }
 
-.mediaVideos { 
+.mediaVideos {
     padding: 20px;
     padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    border-bottom: 2px solid $color__darkBlue;
+    border-bottom: 2px solid map-get($paletaDeColores, darkerBlue);
 }
 
 .marcoVideo {
     margin: 30px auto;
     width: 80%;
-    border: 10px solid $color__softWhite;
+    border: 10px solid map-get($paletaDeColores, softWhite);
     border-radius: 5px;
 }
 
@@ -60,17 +55,16 @@
 }
 
 .mediaGaleria {
+    @include myflex (column, nowrap, flex-start, flex-start);
     padding: 0 20px;
     padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    border-bottom: 2px solid $color__darkBlue;
+    border-bottom: 2px solid map-get($paletaDeColores, darkerBlue);
 }
 
 .contenedorDeSlider {
     width: 80%;
-    border: 10px solid $color__softWhite; 
+    border: 10px solid map-get($paletaDeColores, softWhite); 
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -78,12 +72,12 @@
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon { 
-    background-color: $color__orangeHighlight;
+    background-color: map-get($paletaDeColores, orangeHighlight);
     height: 50px;
 }
     
 .carousel-indicators .active { 
-    background-color: $color__orangeHighlight; 
+    background-color: map-get($paletaDeColores, orangeHighlight); 
 }
 
 .mediaVideos .subtituloDePagina, .mediaGaleria .subtituloDePagina, .mediaFlyers .subtituloDePagina {
@@ -93,15 +87,14 @@
 } 
 
 .mediaFlyers {
+    @include myflex (column, nowrap, flex-start, flex-start);
     padding: 0 20px;   
     padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     img {
         max-width: 500px;
         width: 80%;
-        border: 10px solid $color__softWhite;
+        border: 10px solid map-get($paletaDeColores, softWhite);
         margin-bottom: 20px;
         }
 }

@@ -1,16 +1,28 @@
 /* VARIABLES*/
 
-/*Paleta de colores*/ 
+/*Paleta de colores - "Map" aplicado*/ 
 
-$color__darkBlue: #012C3D;
-$color__lightBlue: #78bcc442;
-$color__orangeHighlight: #e25d31;
-$color__softWhite: #F7F8F3;
+$paletaDeColores: (
+    darkerBlue: #012C3D,
+    lighterBlue: #78bcc442,
+    orangeHighlight: #e25d31,
+    softWhite: #F7F8F3
+);
 
 /*Fonts*/
 
 $font__titulos: 'Montserrat', Verdana, Arial, sans-serif;
 $font__parrafos: Verdana, Tahoma, Arial, sans-serif;
+
+/*Flex - Mixin*/ 
+
+@mixin myflex ($direction, $wrap, $just, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    align-content: $align;
+}
 
 
 /*ESTILOS GENERALES*/
@@ -30,7 +42,7 @@ html {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    background-color: $color__softWhite;
+    background-color: map-get($paletaDeColores, softWhite);
 }
 
 h1, h2, h3, h4 {
@@ -55,23 +67,22 @@ img {
 }
 
 .boton {
-    color: $color__softWhite;
-    background: $color__orangeHighlight;
+    color: map-get($paletaDeColores, softWhite);
+    background: map-get($paletaDeColores, orangeHighlight);
     font-size: 1.3rem;
     font-family: $font__titulos;
     font-weight: 500;
     border-radius: 8px;
     padding: 1rem 1.8rem;
-}
-
-.boton:hover {
-    color: $color__softWhite;
+    &:hover {
+        color: map-get($paletaDeColores, softWhite);
+    }
 }
 
 .boton_Info {
     font-size: 1.1rem;
     font-family: $font__parrafos;
-    border: 1px solid $color__darkBlue;
+    border: 1px solid map-get($paletaDeColores, darkerBlue);
     border-radius: 3px;
     padding: .5rem;
     margin-top: 10px;
@@ -100,7 +111,7 @@ img {
 }
 
 .fondoTextura {
-    background-color: $color__softWhite;
+    background-color: map-get($paletaDeColores, softWhite);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e25d31' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 

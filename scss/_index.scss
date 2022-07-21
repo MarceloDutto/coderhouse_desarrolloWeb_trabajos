@@ -24,24 +24,24 @@
         font-weight: 400;
         font-size: 3.9rem;
         line-height: 1.4;
-        color: $color__softWhite;
+        color: map-get($paletaDeColores, softWhite);
     }
     h2 {
         font-size: 1.7rem;
         line-height: 1.4;
         letter-spacing: 0.6px;
-        color: $color__softWhite;   
+        color: map-get($paletaDeColores, softWhite);   
     }
 }
 
 /* Sections del Index: Proximos conciertos y Noticias */
 
 .conciertos {
-    background-image: linear-gradient(to bottom, #78bcc442, $color__softWhite);
+    background-image: linear-gradient(to bottom, #78bcc442, map-get($paletaDeColores, softWhite));
 }
 
 .noticias {
-    background-color: $color__softWhite;
+    background-color: map-get($paletaDeColores, softWhite);
 }
 
 .index__sections {
@@ -54,7 +54,7 @@
         font-size: 1.4rem;
         font-weight: 600;
         line-height: 1.4;
-        color: $color__orangeHighlight;
+        color: map-get($paletaDeColores, orangeHighlight);
         margin-bottom: 2px;
     }
     p {
@@ -92,8 +92,7 @@
     }
 
     .botonCalendario {
-        display: flex;
-        justify-content: center;
+        @include myflex (row, nowrap, center, flex-start);
     }
 
 }

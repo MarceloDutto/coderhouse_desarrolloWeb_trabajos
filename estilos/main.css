@@ -1,6 +1,7 @@
 /* VARIABLES*/
-/*Paleta de colores*/
+/*Paleta de colores - "Map" aplicado*/
 /*Fonts*/
+/*Flex - Mixin*/
 /*ESTILOS GENERALES*/
 * {
   margin: 0;
@@ -41,9 +42,8 @@ img {
   font-weight: 500;
   border-radius: 8px;
   padding: 1rem 1.8rem; }
-
-.boton:hover {
-  color: #F7F8F3; }
+  .boton:hover {
+    color: #F7F8F3; }
 
 .boton_Info {
   font-size: 1.1rem;
@@ -53,7 +53,7 @@ img {
   padding: .5rem;
   margin-top: 10px; }
 
-.subtituloDePagina {
+.subtituloDePagina, .footer__titulo {
   font-size: 1.9rem;
   font-family: "Montserrat", Verdana, Arial, sans-serif;
   font-weight: 700;
@@ -93,12 +93,18 @@ img {
 
 .nav__menu {
   display: flex;
-  justify-content: flex-end; }
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-content: flex-start; }
 
 .navbar {
   padding-top: 0;
   width: 100%; }
   .navbar .container-fluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: flex-end;
     align-content: flex-end;
     padding-right: 0; }
@@ -142,14 +148,15 @@ footer {
 
 .footer__titulo {
   font-size: 1.4rem;
-  font-weight: 600;
   margin-bottom: 2rem; }
 
 .footer__columna1 {
-  padding: 10px 40px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  text-align: center; }
+  align-content: center;
+  padding: 10px 40px; }
   .footer__columna1 input {
     display: block;
     width: 100%;
@@ -167,20 +174,26 @@ footer {
   .footer__columna1 .botonEnviar {
     width: 50%;
     margin: auto; }
+    .footer__columna1 .botonEnviar input:hover {
+      color: #e25d31;
+      border-color: #e25d31; }
 
 .footer__columna2 {
   padding: 10px 40px;
   text-align: center; }
   .footer__columna2 img {
-    width: 50px;
+    width: 45px;
     transition: scale .2s, ease-in; }
     .footer__columna2 img:hover {
       transform: scale(1.1); }
 
 .footer__redes {
-  margin-top: 40px;
   display: flex;
-  justify-content: space-evenly; }
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  margin-top: 40px; }
 
 .footer__columna3 {
   padding: 10px 40px;
@@ -313,11 +326,14 @@ footer {
     .portada__presentacion h2 {
       font-size: 1rem; }
   /*Sections*/
-  .index__sections .subtituloDePagina {
+  .index__sections .subtituloDePagina, .index__sections .footer__titulo {
     text-align: center; }
   .botonCalendario {
     display: flex;
-    justify-content: center; } }
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start; } }
 
 /*Estilos de la pagina Biografia*/
 .biografia__contenedorDelBody {
@@ -325,7 +341,10 @@ footer {
 
 .enlacesBiografia {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-content: flex-start;
   padding: 50px 0; }
 
 .filaBio {
@@ -341,6 +360,8 @@ footer {
 .directorFotos {
   border: 10px solid #78bcc432;
   border-radius: 5px; }
+  .directorFotos img {
+    filter: grayscale(100%); }
 
 .ensambleTexto {
   padding: 0 20px; }
@@ -448,8 +469,11 @@ footer {
     height: 150px; }
   .temporadaSpan, .temporadaH1 {
     display: flex;
-    padding-left: 0;
-    justify-content: center; }
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding-left: 0; }
   .temporada h1 {
     font-size: 4.4rem; }
   .listadoConciertos {
@@ -464,6 +488,9 @@ footer {
 .encabezadoMedia {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
   margin: 0 auto;
   gap: 30px;
   max-width: 600px;
@@ -481,14 +508,14 @@ footer {
 
 .enlacesMedia {
   display: flex;
-  justify-content: center; }
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start; }
 
 .mediaVideos {
   padding: 20px;
   padding-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
   border-bottom: 2px solid #012C3D; }
 
 .marcoVideo {
@@ -509,10 +536,13 @@ footer {
     height: 100%; }
 
 .mediaGaleria {
-  padding: 0 20px;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 0 20px;
+  padding-bottom: 100px;
   align-items: center;
   border-bottom: 2px solid #012C3D; }
 
@@ -530,16 +560,19 @@ footer {
 .carousel-indicators .active {
   background-color: #e25d31; }
 
-.mediaVideos .subtituloDePagina, .mediaGaleria .subtituloDePagina, .mediaFlyers .subtituloDePagina {
+.mediaVideos .subtituloDePagina, .mediaVideos .footer__titulo, .mediaGaleria .subtituloDePagina, .mediaGaleria .footer__titulo, .mediaFlyers .subtituloDePagina, .mediaFlyers .footer__titulo {
   text-align: center;
   margin-bottom: 40px;
   margin-top: 40px; }
 
 .mediaFlyers {
-  padding: 0 20px;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 0 20px;
+  padding-bottom: 100px;
   align-items: center; }
   .mediaFlyers img {
     max-width: 500px;
@@ -583,32 +616,60 @@ footer {
     color: #012C3D; }
   .contactoFila a {
     color: #012C3D; }
-  .contactoFila .subtituloDePagina {
+  .contactoFila .subtituloDePagina, .contactoFila .footer__titulo {
     font-size: 2.5rem;
     margin-bottom: 40px; }
   .contactoFila section {
-    padding-bottom: 100px; }
+    margin-bottom: 100px; }
 
-.contacto2 {
+.contacto1 {
+  padding: 0 10px; }
+
+.con1Texto {
+  height: 30rem;
+  border: 1px solid #012C3D;
+  border-radius: 10px;
+  background-color: #F7F8F3;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center; }
+  .con1Texto img {
+    width: 45px;
+    margin-top: 10px; }
+
+.contacto2 {
   padding: 0 10px; }
 
 .contenedorTeam {
   display: flex;
-  justify-content: space-between; }
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: flex-start; }
 
 .team {
-  width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 45%;
+  gap: 10px;
   align-items: center;
   text-align: center;
   margin: 0 10px;
   padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   border: 1px solid #012C3D;
   border-radius: 10px;
   background-color: #F7F8F3; }
@@ -618,17 +679,19 @@ footer {
 
 .teamTexto {
   padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: flex-start; }
+  padding-right: 10px; }
 
 .contacto3 {
-  padding: 0 20px;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
-  text-align: center; }
+  align-content: flex-start;
+  height: 250px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #012C3D;
+  border-radius: 10px; }
   .contacto3 input {
     display: block;
     width: 100%;
@@ -648,11 +711,16 @@ footer {
     margin: auto; }
 
 .contacto4 {
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-content: center;
-  text-align: center; }
+  height: 250px;
+  padding: 44px 20px;
+  text-align: center;
+  border: 1px solid #012C3D;
+  border-radius: 10px; }
   .contacto4 img {
     width: 60px;
     transition: .2s ease-in; }
@@ -661,11 +729,17 @@ footer {
 
 .iconosRedes {
   display: flex;
-  justify-content: space-evenly; }
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: flex-start; }
 
 .contacto5 {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start; }
 
 .contenidoContacto5 {
   margin-left: 30px;
@@ -676,7 +750,11 @@ footer {
   margin-top: 20px; }
 
 .formFila {
-  display: flex; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start; }
 
 .formSeccion {
   width: 50%;
@@ -750,11 +828,15 @@ footer {
     font-size: 1.6rem; }
   .contenidoDeContacto p {
     font-size: 1.2rem; }
-  .contenidoDeContacto .subtituloDePagina {
+  .contenidoDeContacto .subtituloDePagina, .contenidoDeContacto .footer__titulo {
     font-size: 2rem; }
+  .contacto1 {
+    text-align: center; }
   .contenedorTeam {
     flex-direction: column;
     gap: 20px; }
+  .contacto2 {
+    text-align: center; }
   .team {
     width: 70%;
     margin: 0 auto; }
@@ -767,21 +849,29 @@ footer {
 @media screen and (max-width: 500px) {
   .contenidoDeContacto section {
     padding-bottom: 50px; }
-  .contenidoDeContacto .subtituloDePagina {
+  .contenidoDeContacto .subtituloDePagina, .contenidoDeContacto .footer__titulo {
     font-size: 1.7rem;
     text-align: center; }
   .contacto1 {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    border-right: none; }
+    align-content: center;
+    text-align: center; }
+  .con1Texto {
+    width: 100%;
+    flex-wrap: nowrap; }
   .contacto2 {
     padding: 5px; }
     .contacto2 p {
       font-size: 1.2rem; }
   .contenedorTeam {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-start; }
   .team {
     flex-direction: column;
     align-items: center;
@@ -807,5 +897,5 @@ footer {
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 500px) {
-  .subtituloDePagina {
+  .subtituloDePagina, .footer__titulo {
     font-size: 1.6rem; } }
