@@ -1,27 +1,27 @@
 /*Estilos de la pagina Biografia*/
 
-.biografia__contenedorDelBody {
+.biografia__contenedor {
     background-image: linear-gradient(to bottom, #78bcc432 35%, map-get($paletaDeColores, softWhite) 65%);
 }
 
-.enlacesBiografia {
+.biografia__enlaces {
     @include myflex (row, nowrap, center, flex-start);
     padding: 50px 0;
 }
 
-.filaBio {
+.biografia__fila {
     padding-top: 1rem;
     padding-bottom: 10rem;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.ensambleFotos {
+.ensamble__fotos {
     border: 10px solid map-get($paletaDeColores, softWhite);
     border-radius: 5px;
 }
 
-.directorFotos {
+.director__fotos {
     border: 10px solid #78bcc432;
     border-radius: 5px;
     img {
@@ -29,18 +29,18 @@
     }
 } 
 
-.ensambleTexto {
+.ensamble__texto {
     padding: 0 20px;
     p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         line-height: 1.4;
     }
 }
 
-.directorTexto {
+.director__texto {
     padding: 0 20px;
     p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         line-height: 1.4;
     }
 }
@@ -51,7 +51,7 @@
 
 @media screen and (max-width: 500px) {
 
-    .enlacesBiografia {
+    .biografia__enlaces {
         flex-wrap: wrap;
         gap: 0.1rem;
         text-align: center;
@@ -60,7 +60,7 @@
         }
     }
 
-    .ensambleFotos .directorFotos {
+    .ensamble__fotos .director__fotos {
         padding: 0 10px;
     }
 }

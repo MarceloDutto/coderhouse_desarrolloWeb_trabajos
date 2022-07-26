@@ -1,6 +1,6 @@
 /*ESTILOS DEL HEADER*/
 
-.contenedorDelEncabezado {
+.encabezado__contenedor {
     background-color: map-get($paletaDeColores, darkerBlue);
     padding: 20px 30px;
 }
@@ -74,7 +74,7 @@ footer {
     background-image: linear-gradient(to top, #78bcc4b4, map-get($paletaDeColores, softWhite));
 }
 
-.contenedorDelFooter {
+.footer__contenedor {
     padding-top: 70px;
     border-top: 1px map-get($paletaDeColores, orangeHighlight) solid;
 } 

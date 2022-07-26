@@ -45,15 +45,16 @@ img {
   .boton:hover {
     color: #F7F8F3; }
 
-.boton_Info {
+.boton__Info, .programas .programas__item a {
   font-size: 1.1rem;
   font-family: Verdana, Tahoma, Arial, sans-serif;
   border: 1px solid #012C3D;
   border-radius: 3px;
   padding: .5rem;
-  margin-top: 10px; }
+  margin-top: 10px;
+  box-shadow: .1px .1px 2px grey; }
 
-.subtituloDePagina, .footer__titulo {
+.pagina__subtitulo {
   font-size: 1.9rem;
   font-family: "Montserrat", Verdana, Arial, sans-serif;
   font-weight: 700;
@@ -70,14 +71,14 @@ img {
   transition: .2s ease; }
   .enlacesInternos:hover {
     background-color: #e25d31f4;
-    color: white; }
+    color: #F7F8F3; }
 
-.fondoTextura {
+.fondo__textura {
   background-color: #F7F8F3;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e25d31' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
 
 /*ESTILOS DEL HEADER*/
-.contenedorDelEncabezado {
+.encabezado__contenedor {
   background-color: #012C3D;
   padding: 20px 30px; }
 
@@ -142,7 +143,7 @@ img {
 footer {
   background-image: linear-gradient(to top, #78bcc4b4, #F7F8F3); }
 
-.contenedorDelFooter {
+.footer__contenedor {
   padding-top: 70px;
   border-top: 1px #e25d31 solid; }
 
@@ -328,7 +329,7 @@ footer {
   /*Sections*/
   .index__sections .subtituloDePagina, .index__sections .footer__titulo {
     text-align: center; }
-  .botonCalendario {
+  .boton__calendario {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -336,10 +337,10 @@ footer {
     align-content: flex-start; } }
 
 /*Estilos de la pagina Biografia*/
-.biografia__contenedorDelBody {
+.biografia__contenedor {
   background-image: linear-gradient(to bottom, #78bcc432 35%, #F7F8F3 65%); }
 
-.enlacesBiografia {
+.biografia__enlaces {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -347,53 +348,52 @@ footer {
   align-content: flex-start;
   padding: 50px 0; }
 
-.filaBio {
+.biografia__fila {
   padding-top: 1rem;
   padding-bottom: 10rem;
   padding-left: 30px;
   padding-right: 30px; }
 
-.ensambleFotos {
+.ensamble__fotos {
   border: 10px solid #F7F8F3;
   border-radius: 5px; }
 
-.directorFotos {
+.director__fotos {
   border: 10px solid #78bcc432;
   border-radius: 5px; }
-  .directorFotos img {
+  .director__fotos img {
     filter: grayscale(100%); }
 
-.ensambleTexto {
+.ensamble__texto {
   padding: 0 20px; }
-  .ensambleTexto p {
-    font-size: 1.3rem;
+  .ensamble__texto p {
+    font-size: 1.4rem;
     line-height: 1.4; }
 
-.directorTexto {
+.director__texto {
   padding: 0 20px; }
-  .directorTexto p {
-    font-size: 1.3rem;
+  .director__texto p {
+    font-size: 1.4rem;
     line-height: 1.4; }
 
 /*MEDIA QUERIES*/
 /*CELULAR*/
 @media screen and (max-width: 500px) {
-  .enlacesBiografia {
+  .biografia__enlaces {
     flex-wrap: wrap;
     gap: 0.1rem;
     text-align: center; }
-    .enlacesBiografia a {
+    .biografia__enlaces a {
       font-size: 0.9rem; }
-  .ensambleFotos .directorFotos {
+  .ensamble__fotos .director__fotos {
     padding: 0 10px; } }
 
 /*Estilos de la pagina Conciertos*/
-.fondoFoto {
-  background: #012C3D;
-  /*estilo temporal*/ }
+.fondo__foto {
+  background: url(../imagenes/EnConcierto.jpg) top left repeat-x fixed; }
 
 /*Keyframes temporada*/
-@keyframes spanAnim {
+@keyframes span__anim {
   0% {
     padding-top: 0;
     opacity: 0; }
@@ -403,71 +403,103 @@ footer {
     padding-top: 60px;
     opacity: 100%; } }
 
-@keyframes H1__Anim {
+@keyframes H1__anim {
   0% {
     opacity: 0; }
   100% {
     opacity: 100%; } }
 
 /*End of Keyframes temporada*/
-.temporadaSpan {
+.temporada__span {
   padding-left: 20px;
   padding-top: 60px;
-  animation: spanAnim 1s ease-out; }
-  .temporadaSpan span {
+  animation: span__anim 1.5s ease-out; }
+  .temporada__span span {
     font-family: "Montserrat", Verdana, Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.6; }
 
-.temporadaH1 {
+.temporada__H1 {
   padding-left: 20px;
   opacity: 0;
-  animation-name: H1__Anim;
-  animation-delay: .8s;
-  animation-duration: 2s;
+  animation-name: H1__anim;
+  animation-delay: 1.3s;
+  animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
-  .temporadaH1 h1 {
+  .temporada__H1 h1 {
     font-family: Verdana, Tahoma, Arial, sans-serif;
     font-size: 6rem;
     color: #e25d31;
     font-weight: 500;
     line-height: 0.8; }
 
-.listadoConciertos {
-  padding: 20px 40px; }
-  .listadoConciertos h3 {
+.conciertos__listado, .programas {
+  padding: 20px 40px;
+  margin-bottom: 50px; }
+  .conciertos__listado h3, .programas h3 {
     font-size: 1.6rem;
     font-weight: 600; }
-  .listadoConciertos h4 {
+  .conciertos__listado h4, .programas h4 {
     font-size: 1.4rem;
     font-weight: 600; }
-  .listadoConciertos p {
+  .conciertos__listado p, .programas p {
     font-size: 1.3rem; }
-  .listadoConciertos .itemConcierto {
+  .conciertos__listado .conciertos__listado--item, .programas .conciertos__listado--item {
     margin-bottom: 3rem; }
-    .listadoConciertos .itemConcierto h4 {
+    .conciertos__listado .conciertos__listado--item h4, .programas .conciertos__listado--item h4 {
       margin-bottom: 3px; }
 
-.encabezadoConciertos {
+.conciertos__encabezado {
   margin-top: 5rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #012C3D; }
 
+.programas {
+  border-top: 1px solid #e25d31;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start; }
+  .programas .pagina__subtitulo {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 60px; }
+  .programas .programas__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 0 100px;
+    align-items: center;
+    text-align: justify;
+    margin-bottom: 70px; }
+    .programas .programas__item img {
+      width: 35px;
+      padding-bottom: 10px; }
+    .programas .programas__item a {
+      padding: 3px;
+      font-size: 1.1rem; }
+      .programas .programas__item a img {
+        width: 15px;
+        padding-bottom: 3px; }
+
 /*MEDIA QUERIES*/
 /*TABLET*/
 @media screen and (max-width: 768px) {
-  .temporadaSpan, .temporadaH1 {
+  .temporada__span, .temporada__H1 {
     padding-left: 5px;
     padding-right: 5px; } }
 
 /*CELULAR*/
 @media screen and (max-width: 500px) {
-  .termporadaAnimContaniner {
+  .termporada {
     position: static;
     height: 150px; }
-  .temporadaSpan, .temporadaH1 {
+  .temporada__span, .temporada__H1 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -476,16 +508,16 @@ footer {
     padding-left: 0; }
   .temporada h1 {
     font-size: 4.4rem; }
-  .listadoConciertos {
+  .conciertos__listado {
     padding-left: 20px; }
-    .listadoConciertos h4 {
+    .conciertos__listado h4 {
       font-size: 1.3rem; } }
 
 /*Estilos de la pagina Media*/
-.media__contenedorDelBody {
+.media__contenedor {
   background-image: linear-gradient(to bottom, #78bcc432, #F7F8F3); }
 
-.encabezadoMedia {
+.media__encabezado {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -506,19 +538,19 @@ footer {
     color: #e25d31;
     display: block; }
 
-.enlacesMedia {
+.media__enlaces {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: flex-start; }
 
-.mediaVideos {
+.media__videos {
   padding: 20px;
   padding-bottom: 100px;
   border-bottom: 2px solid #012C3D; }
 
-.marcoVideo {
+.videos__marco {
   margin: 30px auto;
   width: 80%;
   border: 10px solid #F7F8F3;
@@ -535,7 +567,7 @@ footer {
     width: 100%;
     height: 100%; }
 
-.mediaGaleria {
+.media__galeria {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -546,7 +578,7 @@ footer {
   align-items: center;
   border-bottom: 2px solid #012C3D; }
 
-.contenedorDeSlider {
+.slider__contenedor {
   width: 80%;
   border: 10px solid #F7F8F3; }
 
@@ -560,12 +592,12 @@ footer {
 .carousel-indicators .active {
   background-color: #e25d31; }
 
-.mediaVideos .subtituloDePagina, .mediaVideos .footer__titulo, .mediaGaleria .subtituloDePagina, .mediaGaleria .footer__titulo, .mediaFlyers .subtituloDePagina, .mediaFlyers .footer__titulo {
+.media__videos .pagina__subtitulo, .media__galeria .pagina__subtitulo, .media__flyers .pagina__subtitulo {
   text-align: center;
   margin-bottom: 40px;
   margin-top: 40px; }
 
-.mediaFlyers {
+.media__flyers {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -574,7 +606,7 @@ footer {
   padding: 0 20px;
   padding-bottom: 100px;
   align-items: center; }
-  .mediaFlyers img {
+  .media__flyers img {
     max-width: 500px;
     width: 80%;
     border: 10px solid #F7F8F3;
@@ -583,53 +615,53 @@ footer {
 /*MEDIA QUERIES*/
 /*CELULAR*/
 @media screen and (max-width: 500px) {
-  .enlacesMedia {
+  .media__enlaces {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1px; }
-    .enlacesMedia .enlacesInternos {
+    .media__enlaces .enlacesInternos {
       width: 60%; } }
 
 /*Estilo de la pagina Contacto*/
-.contenidoDeContacto {
-  background-color: #F7F8F3;
+.contacto__contenedor {
   background-image: linear-gradient(to bottom, #78bcc455, #F7F8F3);
   padding-top: 50px; }
 
-.contactoFila {
+.contacto__fila {
   margin-left: 0;
   margin-right: 0;
   padding-left: 20px;
   padding-right: 20px; }
-  .contactoFila h3 {
+  .contacto__fila h3 {
     font-size: 1.8rem;
     font-weight: bold; }
-  .contactoFila h4 {
+  .contacto__fila h4 {
     font-size: 1.6rem;
     font-weight: 500;
     color: #e25d31;
     line-height: 1.3; }
-  .contactoFila p {
+  .contacto__fila p {
     font-size: 1.3rem;
     margin-bottom: 2px;
     color: #012C3D; }
-  .contactoFila a {
+  .contacto__fila a {
     color: #012C3D; }
-  .contactoFila .subtituloDePagina, .contactoFila .footer__titulo {
+  .contacto__fila .pagina__subtitulo {
     font-size: 2.5rem;
     margin-bottom: 40px; }
-  .contactoFila section {
+  .contacto__fila section {
     margin-bottom: 100px; }
 
-.contacto1 {
+.contacto__1 {
   padding: 0 10px; }
 
-.con1Texto {
+.contacto__1--texto {
   height: 30rem;
   border: 1px solid #012C3D;
   border-radius: 10px;
   background-color: #F7F8F3;
+  box-shadow: .2px .2px 5px grey;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 20px;
@@ -641,21 +673,21 @@ footer {
   align-content: center;
   align-items: center;
   text-align: center; }
-  .con1Texto img {
+  .contacto__1--texto img {
     width: 45px;
     margin-top: 10px; }
 
-.contacto2 {
+.contacto__2 {
   padding: 0 10px; }
 
-.contenedorTeam {
+.equipo__contenedor {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-content: flex-start; }
 
-.team {
+.equipo {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -672,16 +704,17 @@ footer {
   padding-bottom: 40px;
   border: 1px solid #012C3D;
   border-radius: 10px;
-  background-color: #F7F8F3; }
-  .team img {
+  background-color: #F7F8F3;
+  box-shadow: .2px .2px 5px grey; }
+  .equipo img {
     width: 35%;
     border-radius: 50%; }
 
-.teamTexto {
+.equipo__texto {
   padding-left: 10px;
   padding-right: 10px; }
 
-.contacto3 {
+.contacto__3 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -691,8 +724,10 @@ footer {
   padding: 30px 20px;
   text-align: center;
   border: 1px solid #012C3D;
-  border-radius: 10px; }
-  .contacto3 input {
+  border-radius: 10px;
+  background-color: #F7F8F3;
+  box-shadow: .2px .2px 5px grey; }
+  .contacto__3 input {
     display: block;
     width: 100%;
     height: 34px;
@@ -703,14 +738,16 @@ footer {
     border: 1px solid;
     border-radius: 5px;
     margin-bottom: 10px; }
-    .contacto3 input:focus {
+    .contacto__3 input:focus {
       outline: 0;
       border-color: #e25d31; }
-  .contacto3 .botonEnviar {
+  .contacto__3 .botonEnviar {
     width: 40%;
     margin: auto; }
+    .contacto__3 .botonEnviar input {
+      background-color: #f0f0f0; }
 
-.contacto4 {
+.contacto__4 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -720,63 +757,70 @@ footer {
   padding: 44px 20px;
   text-align: center;
   border: 1px solid #012C3D;
-  border-radius: 10px; }
-  .contacto4 img {
+  border-radius: 10px;
+  background-color: #F7F8F3;
+  box-shadow: .2px .2px 10px grey; }
+  .contacto__4 img {
     width: 60px;
     transition: .2s ease-in; }
-    .contacto4 img:hover {
+    .contacto__4 img:hover {
       transform: scale(1.1); }
 
-.iconosRedes {
+.contacto__4--iconos {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-content: flex-start; }
 
-.contacto5 {
+.contacto__5 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-content: flex-start; }
+  align-content: flex-start;
+  border: 1px solid #012C3D;
+  border-radius: 10px;
+  background-color: #F7F8F3;
+  box-shadow: .2px .2px 10px grey;
+  padding-bottom: 40px; }
 
-.contenidoContacto5 {
+.contacto__5--contenido {
   margin-left: 30px;
   margin-right: 30px; }
 
-.tituloFormulario {
+.formulario__titulo {
   text-align: center;
   margin-top: 20px; }
 
-.formFila {
+.formulario__fila {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: flex-start; }
 
-.formSeccion {
+.formulario__seccion {
   width: 50%;
   padding-left: 15px;
   padding-right: 15px; }
 
-.seccionLarga {
+.formulario__seccionLarga {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px; }
 
-.formGrupo {
+.formulario__grupo {
   font-size: 1.8rem;
   letter-spacing: .2px;
   margin-bottom: 15px;
   line-height: 25px; }
-  .formGrupo label {
+  .formulario__grupo label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 600; }
-  .formGrupo input {
+  .formulario__grupo input {
     display: block;
     width: 100%;
     height: 34px;
@@ -786,10 +830,10 @@ footer {
     line-height: 1.4;
     border: 1px solid;
     border-radius: 5px; }
-    .formGrupo input:focus {
+    .formulario__grupo input:focus {
       outline: 0;
       border-color: #e25d31; }
-  .formGrupo textarea {
+  .formulario__grupo textarea {
     display: block;
     width: 100%;
     height: auto;
@@ -799,7 +843,7 @@ footer {
     line-height: 1.4;
     border: 1px solid;
     border-radius: 5px; }
-    .formGrupo textarea:focus {
+    .formulario__grupo textarea:focus {
       outline: 0;
       border-color: #e25d31; }
 
@@ -822,57 +866,57 @@ footer {
 /*MEDIA QUERIES*/
 /*TABLET*/
 @media screen and (max-width: 768px) {
-  .contenidoDeContacto h4 {
+  .contacto__contenedor h4 {
     font-size: 1.4rem; }
-  .contenidoDeContacto h3 {
+  .contacto__contenedor h3 {
     font-size: 1.6rem; }
-  .contenidoDeContacto p {
+  .contacto__contenedor p {
     font-size: 1.2rem; }
-  .contenidoDeContacto .subtituloDePagina, .contenidoDeContacto .footer__titulo {
+  .contacto__contenedor .pagina__subtitulo {
     font-size: 2rem; }
-  .contacto1 {
+  .contacto__1 {
     text-align: center; }
-  .contenedorTeam {
+  .equipo__contenedor {
     flex-direction: column;
     gap: 20px; }
-  .contacto2 {
+  .contacto__2 {
     text-align: center; }
-  .team {
+  .equipo {
     width: 70%;
     margin: 0 auto; }
-  .contacto3 img {
+  .contacto__3 img {
     width: 40px; }
-  .contacto4 img {
+  .contacto__4 img {
     width: 55%; } }
 
 /*CELULAR*/
 @media screen and (max-width: 500px) {
-  .contenidoDeContacto section {
+  .contacto__contenedor section {
     padding-bottom: 50px; }
-  .contenidoDeContacto .subtituloDePagina, .contenidoDeContacto .footer__titulo {
+  .contacto__contenedor .pagina__subtitulo {
     font-size: 1.7rem;
     text-align: center; }
-  .contacto1 {
+  .contacto__1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     text-align: center; }
-  .con1Texto {
+  .contacto__1--texto {
     width: 100%;
     flex-wrap: nowrap; }
-  .contacto2 {
+  .contacto__2 {
     padding: 5px; }
-    .contacto2 p {
+    .contacto__2 p {
       font-size: 1.2rem; }
-  .contenedorTeam {
+  .equipo__contenedor {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: flex-start; }
-  .team {
+  .equipo {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -880,22 +924,22 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%; }
-    .team img {
+    .equipo img {
       width: 50%;
       padding-bottom: 20px; }
-  .contacto3 .botonEnviar {
+  .contacto__3 .botonEnviar {
     width: 60%;
     text-align: center; }
-  .formFila {
+  .formulario__fila {
     flex-wrap: wrap; }
-  .formSeccion {
+  .formulario__seccion {
     width: 100%; }
-  .contacto5 .botonEnviar {
+  .contacto__5 .botonEnviar {
     text-align: center; }
-  .contacto5 label {
+  .contacto__5 label {
     font-size: 1.4rem; } }
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 500px) {
-  .subtituloDePagina, .footer__titulo {
+  .pagina__subtitulo {
     font-size: 1.6rem; } }

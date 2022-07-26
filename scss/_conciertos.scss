@@ -1,11 +1,11 @@
 /*Estilos de la pagina Conciertos*/ 
 
-.fondoFoto {
-    background: map-get($paletaDeColores, darkerBlue);   /*estilo temporal*/
+.fondo__foto {
+    background: url(../imagenes/EnConcierto.jpg) top left repeat-x fixed;
 }
 
 /*Keyframes temporada*/
-@keyframes spanAnim {
+@keyframes span__anim {
     0% {
         padding-top: 0;
         opacity: 0;
@@ -20,7 +20,7 @@
     }
 }
 
-@keyframes H1__Anim {
+@keyframes H1__anim {
     0% {
         opacity: 0;
     }
@@ -31,10 +31,10 @@
 
 /*End of Keyframes temporada*/
 
-.temporadaSpan {
+.temporada__span {
     padding-left: 20px;
     padding-top: 60px;
-    animation: spanAnim 1s ease-out;
+    animation: span__anim 1.5s ease-out;
     span {
         font-family: $font__titulos;
         font-size: 1.8rem;
@@ -43,12 +43,12 @@
     }
 }
 
-.temporadaH1 {
+.temporada__H1 {
     padding-left: 20px;
     opacity: 0;
-    animation-name: H1__Anim;
-    animation-delay: .8s;
-    animation-duration: 2s;
+    animation-name: H1__anim;
+    animation-delay: 1.3s;
+    animation-duration: 1.5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     h1 {
@@ -60,8 +60,9 @@
     }
 }
 
-.listadoConciertos {
+.conciertos__listado, .programas {
     padding: 20px 40px;
+    margin-bottom: 50px;
     h3 {
         font-size: 1.6rem;
         font-weight: 600;
@@ -73,7 +74,7 @@
     p {
         font-size: 1.3rem;
     }
-    .itemConcierto {
+    .conciertos__listado--item {
         margin-bottom: 3rem;
         h4 {
             margin-bottom: 3px;
@@ -81,19 +82,48 @@
     } 
 }
 
-.encabezadoConciertos {
+.conciertos__encabezado {
     margin-top: 5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid map-get($paletaDeColores, darkerBlue);
 }
 
+.programas {
+    border-top: 1px solid  map-get($paletaDeColores, orangeHighlight);
+    @include myflex (column, nowrap, flex-start, flex-start);
+    .pagina__subtitulo {
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .programas__item {
+        @include myflex (column, nowrap, flex-start, center);
+        padding: 0 100px;
+        align-items: center;
+        text-align: justify;
+        margin-bottom: 70px;
+        img {
+            width: 35px;
+            padding-bottom: 10px
+        }
+        a {
+            @extend .boton__Info;
+            padding: 3px;
+            font-size: 1.1rem;
+            img {
+                width: 15px;
+                padding-bottom: 3px;
+            }
+        }
+    }    
+}
 
 /*MEDIA QUERIES*/
 
 /*TABLET*/
 
 @media screen and (max-width: 768px) {
-    .temporadaSpan, .temporadaH1 {
+    .temporada__span, .temporada__H1 {
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -103,12 +133,12 @@
 
 @media screen and (max-width: 500px) {
 
-    .termporadaAnimContaniner {
+    .termporada {
         position:static;
         height: 150px;
     }
 
-    .temporadaSpan, .temporadaH1 {
+    .temporada__span, .temporada__H1 {
         @include myflex (row, nowrap, center, flex-start);
         padding-left: 0;
     }
@@ -117,7 +147,7 @@
         font-size: 4.4rem;    
     }
 
-    .listadoConciertos {
+    .conciertos__listado {
         padding-left: 20px;
         h4 {
             font-size: 1.3rem;

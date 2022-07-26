@@ -91,7 +91,7 @@
         }
     }
 
-    .botonCalendario {
+    .boton__calendario {
         @include myflex (row, nowrap, center, flex-start);
     }
 

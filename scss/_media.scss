@@ -1,10 +1,10 @@
 /*Estilos de la pagina Media*/
 
-.media__contenedorDelBody {
+.media__contenedor {
     background-image: linear-gradient(to bottom, #78bcc432, map-get($paletaDeColores, softWhite));
 }
 
-.encabezadoMedia {
+.media__encabezado {
     @include myflex (column, nowrap, flex-start, flex-start);
     margin: 0 auto;
     gap: 30px;
@@ -24,17 +24,17 @@
     }
 }
 
-.enlacesMedia {
+.media__enlaces {
     @include myflex (row, nowrap, center, flex-start);
 }
 
-.mediaVideos {
+.media__videos {
     padding: 20px;
     padding-bottom: 100px;
     border-bottom: 2px solid map-get($paletaDeColores, darkerBlue);
 }
 
-.marcoVideo {
+.videos__marco {
     margin: 30px auto;
     width: 80%;
     border: 10px solid map-get($paletaDeColores, softWhite);
@@ -54,7 +54,7 @@
     }
 }
 
-.mediaGaleria {
+.media__galeria {
     @include myflex (column, nowrap, flex-start, flex-start);
     padding: 0 20px;
     padding-bottom: 100px;
@@ -62,7 +62,7 @@
     border-bottom: 2px solid map-get($paletaDeColores, darkerBlue);
 }
 
-.contenedorDeSlider {
+.slider__contenedor {
     width: 80%;
     border: 10px solid map-get($paletaDeColores, softWhite); 
 }
@@ -80,13 +80,13 @@
     background-color: map-get($paletaDeColores, orangeHighlight); 
 }
 
-.mediaVideos .subtituloDePagina, .mediaGaleria .subtituloDePagina, .mediaFlyers .subtituloDePagina {
+.media__videos .pagina__subtitulo, .media__galeria .pagina__subtitulo, .media__flyers .pagina__subtitulo {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 40px;
 } 
 
-.mediaFlyers {
+.media__flyers {
     @include myflex (column, nowrap, flex-start, flex-start);
     padding: 0 20px;   
     padding-bottom: 100px;
@@ -106,7 +106,7 @@
 
 @media screen and (max-width: 500px) {
 
-    .enlacesMedia {
+    .media__enlaces {
         display: flex;
         flex-direction: column;
         align-items: center;

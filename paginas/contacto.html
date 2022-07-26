@@ -17,12 +17,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="fondoTextura">
+<body class="fondo__textura">
     <div class="contenedor">
     
        <!-- Comienzo del Header -->
        <header>
-        <div class="container-fluid contenedorDelEncabezado">
+        <div class="container-fluid encabezado__contenedor">
             <div class="row">
                 <div class="col-md-5 col-lg-3">
                     <div class="logo">
@@ -69,12 +69,12 @@
         </header> 
         <!-- Fin del Header -->
     
-        <div class="container-fluid contenidoDeContacto">
-            <div class="row contactoFila">
+        <div class="container-fluid contacto__contenedor">
+            <div class="row contacto__fila">
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4"> 
-                    <section class="contacto1">
-                        <h2 class="subtituloDePagina">Contacto</h2>
-                        <div class="con1Texto">  
+                    <section class="contacto__1">
+                        <h2 class="pagina__subtitulo">Contacto</h2>
+                        <div class="contacto__1--texto">  
                             <h3>Ensamble Polifonistas</h3>
                             <img src="../imagenes/IconoDireccion.png" alt="Icono de Direccion">
                             <p>J. M. Moreno 693 - CABA</p>
@@ -86,21 +86,21 @@
                     </section>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-                    <section class="contacto2">
-                        <h2 class="subtituloDePagina">Equipo</h2>
-                        <div class="row contenedorTeam">
-                            <div class="team">
+                    <section class="contacto__2">
+                        <h2 class="pagina__subtitulo">Equipo</h2>
+                        <div class="row equipo__contenedor">
+                            <div class="equipo">
                                 <img src="../imagenes/director_resized.jpg" alt="Marcelo Dutto">
-                                <div class="teamTexto">
+                                <div class="equipo__texto">
                                     <h3>Marcelo Dutto</h3>
                                     <h4>Director artístico<h4>
                                     <p><a href="mailto: polifonistas@gmail.com">marcelodutto@polifonistas.com</a></p>
                                     <p>Tel: (+54) 11 1234 5678</p>
                                 </div>
                             </div>
-                            <div class="team">
+                            <div class="equipo">
                                 <img src="../imagenes/ProductoraEjecutiva_resized.jpg" alt="Virginia Majorel">
-                                <div class="teamTexto">
+                                <div class="equipo__texto">
                                     <h3>Virginia Majorel</h3>
                                     <h4>Productora ejecutiva<h4>
                                     <p><a href="mailto: polifonistas@gmail.com">virginiamajorel@polifonistas.com</a></p>
@@ -112,11 +112,11 @@
                 </div>
             </div>
             
-            <div class="row contactoFila">
+            <div class="row contacto__fila">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <section class="contacto3">
+                    <section class="contacto__3">
                         <form>
-                            <label for="newsletter"><h2 class="subtituloDePagina">Suscríbase a nuestro newsletter</h2></label>
+                            <label for="newsletter"><h2 class="pagina__subtitulo">Suscríbase a nuestro newsletter</h2></label>
                             <input type="email" name="newsletter" placeholder="Ingrese su email...">
                             <div class="botonEnviar">
                                 <input type="submit" value="Enviar">
@@ -125,9 +125,9 @@
                     </section>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <section class="contacto4">
-                        <h2 class="subtituloDePagina">Síganos en las redes sociales</h2>
-                        <div class="iconosRedes">
+                    <section class="contacto__4">
+                        <h2 class="pagina__subtitulo">Síganos en las redes sociales</h2>
+                        <div class="contacto__4--iconos">
                             <a href="https://www.facebook.com/polifonistasensamblevocal" target="_blank"><img src="../imagenes/FacebookIcon.png" alt="facebook de polifonistas"></a>
                             <a href="https://www.instagram.com/polifonistasensamble/" target="_blank"><img src="../imagenes/InstagramIcon.png" alt="instagram de polifonistas"></a>
                             <a href="https://www.youtube.com/channel/UCkrr4w27aaOQKGNvlx3SkfQ" target="_blank"><img src="../imagenes/YoutubeIcon.png" alt="Youtube de polifonistas"></a>
@@ -136,45 +136,45 @@
                 </div>
             </div>
             
-            <div class="row contactoFila">
-                <section class="contacto5">
-                    <div class="contenidoContacto5">
-                        <div class="tituloFormulario">
-                            <h2 class="subtituloDePagina">Formulario de contacto</h2>
+            <div class="row contacto__fila">
+                <section class="contacto__5">
+                    <div class="contacto__5--contenido">
+                        <div class="formulario__titulo">
+                            <h2 class="pagina__subtitulo">Formulario de contacto</h2>
                         </div>
-                        <div class="formulario">
+                        <div>
                             <form>
-                                <div class="formFila">
-                                    <div class="formSeccion">
-                                        <div class="formGrupo">
+                                <div class="formulario__fila">
+                                    <div class="formulario__seccion">
+                                        <div class="formulario__grupo">
                                             <label for="nombre">Nombre:</label>             
                                             <input type="text" name="nombre" placeholder="Nombre" />
                                         </div>            
-                                        <div class="formGrupo">
+                                        <div class="formulario__grupo">
                                             <label for="apellido">Apellido:</label> 
                                             <input type="text" name="apellido" placeholder="Apellido" />
                                         </div>
                                     </div>
-                                    <div class="formSeccion">
-                                        <div class="formGrupo">
+                                    <div class="formulario__seccion">
+                                        <div class="formulario__grupo">
                                             <label for="newsletter">Correo electrónico:</label>
                                             <input type="email" name="newsletter" placeholder="Ingrese su email...">
                                         </div>
-                                        <div class="formGrupo">
+                                        <div class="formulario__grupo">
                                             <label for="asunto">Asunto:</label>             
                                             <input type="text" name="asunto" placeholder="Asunto" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="formFila">
-                                    <div class="seccionLarga">
-                                        <div class="formGrupo">
+                                <div class="formulario__fila">
+                                    <div class="formulario__seccionLarga">
+                                        <div class="formulario__grupo">
                                             <label for="mensaje">Escriba su mensaje:</label>
                                             <textarea name="mensaje" cols="30" rows="10"></textarea>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="botonEnviar formSeccion">
+                                <div class="botonEnviar formulario__seccion">
                                     <input type="submit" value="Enviar">
                                 </div>
                             </form>
@@ -186,7 +186,7 @@
     
         <!-- Comienzo del Footer -->
         <footer>
-            <div class="container-fluid contenedorDelFooter">
+            <div class="container-fluid footer__contenedor">
                 <div class="row">    
                     <div class="col-xs-12 col-md-6 col-lg-4 footer__columna1">
                         <form>
