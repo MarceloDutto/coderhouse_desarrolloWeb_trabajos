@@ -90,7 +90,7 @@
 
 .programas {
     border-top: 1px solid  map-get($paletaDeColores, orangeHighlight);
-    @include myflex (column, nowrap, flex-start, flex-start);
+
     .pagina__subtitulo {
         margin-top: 30px;
         text-align: center;
@@ -153,4 +153,12 @@
             font-size: 1.3rem;
         }
     }
+
+    .programas {
+        .programas__item {
+            padding: 0 10px;
+        } 
+    }
+
+
 }

@@ -457,12 +457,7 @@ footer {
   border-bottom: 1px solid #012C3D; }
 
 .programas {
-  border-top: 1px solid #e25d31;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: flex-start; }
+  border-top: 1px solid #e25d31; }
   .programas .pagina__subtitulo {
     margin-top: 30px;
     text-align: center;
@@ -511,7 +506,9 @@ footer {
   .conciertos__listado {
     padding-left: 20px; }
     .conciertos__listado h4 {
-      font-size: 1.3rem; } }
+      font-size: 1.3rem; }
+  .programas .programas__item {
+    padding: 0 10px; } }
 
 /*Estilos de la pagina Media*/
 .media__contenedor {
