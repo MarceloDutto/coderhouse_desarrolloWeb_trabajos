@@ -31,21 +31,45 @@
 
 .ensamble__texto {
     padding: 0 20px;
+    .pagina__subtitulo {
+        color: map-get($paletaDeColores, orangeHighlight);
+        font-size: 1.9rem;
+        text-transform: none;
+    }
     p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1.4;
     }
 }
 
 .director__texto {
     padding: 0 20px;
+    .pagina__subtitulo {
+        color: map-get($paletaDeColores, orangeHighlight);
+        font-size: 1.9rem;
+        text-transform: none;
+    }
     p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1.4;
     }
 }
 
 /*MEDIA QUERIES*/
+
+
+/*TABLET*/
+
+@media screen and (max-width: 768px) {
+
+.biografia__fila {
+    padding-bottom: 3rem;
+}
+
+.ensamble__texto, .director__texto {
+    margin-top: 1rem;
+}
+}
 
 /*CELULAR*/ 
 
@@ -56,11 +80,10 @@
         gap: 0.1rem;
         text-align: center;
         a {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
         }
     }
 
-    .ensamble__fotos .director__fotos {
-        padding: 0 10px;
-    }
+    
+
 }

@@ -48,7 +48,7 @@
     padding: 3rem;
     height: 100%;
     article {
-        margin: 45px 0;
+        margin: 30px 0;
     }
     h3 {
         font-size: 1.4rem;
@@ -60,7 +60,7 @@
     p {
         font-size: 1.3rem;
         line-height: 1.4;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         text-align: left;
     }
 }
@@ -76,19 +76,20 @@
     .portada__presentacion {
         padding: 10px 45px 10px 45px;
         h1 {
-            font-size: 1.7rem;
+            font-size: 2.3rem;
         }
         h2 {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
 
     /*Sections*/ 
 
     .index__sections {
-        .subtituloDePagina{
+        .pagina__subtitulo {
             text-align: center;
         }
+        
     }
 
     .boton__calendario {

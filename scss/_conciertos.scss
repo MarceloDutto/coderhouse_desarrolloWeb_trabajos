@@ -92,9 +92,11 @@
     border-top: 1px solid  map-get($paletaDeColores, orangeHighlight);
 
     .pagina__subtitulo {
+        font-size: 2.9rem;
         margin-top: 30px;
         text-align: center;
         margin-bottom: 60px;
+        text-transform: uppercase;
     }
     .programas__item {
         @include myflex (column, nowrap, flex-start, center);
@@ -155,6 +157,9 @@
     }
 
     .programas {
+        .pagina__subtitulo {
+            font-size: 2.3rem;
+        }
         .programas__item {
             padding: 0 10px;
         } 
